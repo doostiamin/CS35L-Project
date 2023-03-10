@@ -2,6 +2,7 @@ import { Box, FormControl, TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import welcome from '../assets/welcome.png';
 
 const login = {
   margin: "5px"
@@ -27,10 +28,13 @@ const Login = () => {
 
   return (
     <Box height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Box display="block" width="70vw" sx = {{mb: "2%"}}>
+        <img src={welcome} className="Welcome-image" alt = "welcome" width="100%"/>
+      </Box>
       <Box>
-        <TextField id="email" 
-          type="email" 
-          placeholder="email" 
+        <TextField id="username" 
+          type="userxname" 
+          placeholder="username" 
           onChange={(e) => setUsername(e.target.value)}
           sx={login}
         />
