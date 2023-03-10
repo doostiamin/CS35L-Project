@@ -12,28 +12,27 @@ const boxSidePanel = {
     minWidth: 100,
     m: 1,
     alignItems: "center",
-    backgroundColor: 'LightGray',
+    backgroundColor: 'LightYellow',
 }
 
 const boxSpell = {
     display: "flex",
     flexDirection: "column",
-    height: 770,
+    height: 780,
     width:0.75,
     padding: 2,
     m: 1,
     alignItems: "center",
-    backgroundColor: 'LightYellow'
 }
 function getUserInfo() {
     //TODO
 }
 
-export default function Homepage() {
+export default function Homepage(props) {
     return (
     <div id="homepage">
         <Stack direction="row">
-            <Box sx={boxSidePanel}>
+            <Box sx={boxSidePanel} justifyContent="center" height="maxHeight">
                 <h2>Name</h2>
                 <h3>Points:1000</h3>
                 <div>
@@ -48,29 +47,29 @@ export default function Homepage() {
             </div>
             </Box>
             <Box sx={boxSpell} alignItems="center" justifyContent="center">
-                <h1>Spell!</h1>
+                <h1><span role="img">🐝 </span>Spell!<span role="img"> 🐝</span></h1>
                 <h2>By Difficulty</h2>
                 <div>
-                    <Link to="/spell">
+                    <Link to="/spell" state={{difficulty: "easy"}}>
                         <Button variant="outlined" sx={{height:40}}>Easy</Button>
                     </Link>        
-                    <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Medium</Button>
+                    <Link to="/spell" state={{difficulty: "intermediate"}}>
+                        <Button variant="outlined" sx={{height:40}}>Intermediate</Button>
                     </Link>
-                    <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Hard</Button>
+                    <Link to="/spell" state={{difficulty: "difficult"}}>
+                        <Button variant="outlined" sx={{height:40}}>Difficult</Button>
                     </Link>
                 </div>
                 <h2>By Topic</h2>
                 <div>
                     <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Category 1</Button>
+                        <Button variant="outlined" sx={{height:40}}>General</Button>
                         </Link>
                     <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Category 2</Button>
+                        <Button variant="outlined" sx={{height:40}}>Animals</Button>
                     </Link>
                     <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Category 3</Button>
+                        <Button variant="outlined" sx={{height:40}}>Foods</Button>
                     </Link>
                 </div>
             </Box>

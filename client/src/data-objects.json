@@ -1,0 +1,678 @@
+{
+  "easy": {
+    "bias": {
+      "audio": "/assets/audio/bias.mp3",
+      "definition": "Prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+    },
+
+    "bird": {
+      "audio": "/assets/audio/bird.mp3",
+      "definition": "A warm-blooded egg-laying vertebrate distinguished by the possession of feathers, wings, and a beak and (typically) by being able to fly.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["animals", "general"]
+    },
+
+    "care": {
+      "audio": "/assets/audio/care.mp3",
+      "definition": "The provision of what is necessary for the health, welfare, maintenance, and protection of someone or something.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+    },
+
+    "chair": {
+      "audio": "/assets/audio/chair.mp3",
+      "definition": "A separate seat for one person, typically with a back and four legs.",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general"]
+    },
+
+    "coat": {
+      "audio": "/assets/audio/coat.mp3",
+      "definition": "An outer garment worn outdoors, having sleeves and typically extending below the hips.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+    },
+
+    "cost": {
+      "audio": "/assets/audio/cost.mp3",
+      "definition": "Require the payment of (a specified sum of money) before it can be acquired or done.",
+      "type": "verb",
+      "points": 20,
+	"categories": ["general"]
+    },
+
+    "cure": {
+      "audio": "/assets/audio/cure.mp3",
+      "definition": "Relieve (a person or animal) of the symptoms of a disease or condition.",
+      "type": "verb",
+      "points": 20,
+      "categories": ["general"]
+    },
+
+    "cusp": {
+      "audio": "/assets/audio/cusp.mp3",
+      "definition": "a point of transition between two different states.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+    },
+
+
+    "dial": {
+      "audio": "/assets/audio/dial.mp3",
+      "definition": "Call (a phone number) by turning a disk with numbered holes or using a keypad or touchscreen.",
+      "type": "verb",
+      "points": 20,
+	"categories": ["general"]
+    },
+
+      
+    "ding": {
+      "audio": "/assets/audio/ding.mp3",
+      "definition": "make a ringing sound.",
+      "type":"verb",
+      "points": 20,
+      "categories": ["general"]
+    },
+
+    "load": {
+      "audio": "/assets/audio/load.mp3",
+      "definition": "A heavy or bulky thing that is being carried or is about to be carried.",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general"]
+	  },
+
+    "long": {
+      "audio": "/assets/audio/long.mp3",
+      "definition": "measuring a great distance from end to end.",
+      "type": "adjective",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "dust": {
+      "audio": "/assets/audio/dust.mp3",
+      "definition": "Fine, dry powder consisting of tiny particles of earth or waste matter lying on the ground or on surfaces or carried in the air",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "hair": {
+      "audio": "/assets/audio/hair.mp3",
+      "definition": "Any of the fine threadlike strands growing from the skin of humans, mammals, and some other animals",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "jacket": {
+      "audio": "/assets/audio/jacket.mp3",
+      "definition": "An outer garment extending either to the waist or the hips, typically having sleeves and a fastening down the front.",
+      "type": "noun",
+      "points": 30,
+      "categories": ["general"]
+	  },
+
+    "fork": {
+      "audio": "/assets/audio/fork.mp3",
+      "definition": "An implement with two or more prongs used for lifting food to the mouth or holding it when cutting",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+	  },
+
+    "jeans": {
+      "audio": "/assets/audio/jeans.mp3",
+      "definition": "Hard-wearing trousers made of denim or other cotton fabric, for informal wear",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general"]
+	  },
+
+    "junk": {
+      "audio": "/assets/audio/junk.mp3",
+      "definition": "Discard or abandon unceremoniously",
+      "type": "verb",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "knife": {
+      "audio": "/assets/audio/knife.mp3",
+      "definition": "An instrument composed of a blade fixed into a handle, used for cutting or as a weapon",
+      "type": "noun",
+      "points": 25,
+      "categories": ["food", "general"]
+	  },
+
+    "less": {
+      "audio": "/assets/audio/less.mp3",
+      "definition": "Of lower rank or importance",
+	"type": "adjective",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "moon": {
+      "audio": "/assets/audio/moon.mp3",
+      "definition": "The natural satellite of the earth, visible (chiefly at night) by reflected light from the sun.",
+	"type": "noun",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "more": {
+      "audio": "/assets/audio/more.mp3",
+      "definition": "A greater or additional amount of something.",
+      "type": "pronoun",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "part": {
+      "audio": "/assets/audio/part.mp3",
+      "definition": "A piece or segment of something such as an object, activity, or period of time, which combined with other pieces makes up the whole",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general"]
+	  },
+
+    "sheet": {
+      "audio": "/assets/audio/sheet.mp3",
+      "definition": "A large rectangular piece of cotton or other fabric, used on a bed to cover the mattress and as a layer beneath blankets when these are used",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general"]
+	  },
+
+    "trash": {
+      "audio": "/assets/audio/trash.mp3",
+      "definition": "Damage or wreck",
+      "type": "verb",
+      "points": 25,
+      "categories": ["general"]
+    }
+
+
+  },
+
+
+
+    
+
+    "intermediate": {
+	
+    "apartment": {
+      "audio": "/assets/audio/apartment.mp3",
+      "definition": "A suite of rooms forming one residence, typically in a building containing a number of these",
+      "type": "noun",
+      "points": 45,
+      "categories": ["general"]
+    },
+
+	
+    "banish": {
+      "audio": "/assets/audio/banish.mp3",
+      "definition": "Send (someone) away from a country or place as an official punishment",
+      "type": "verb",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "baseball": {
+      "audio": "/assets/audio/baseball.mp3",
+      "definition": "A ball game played between two teams of nine on a field with a diamond-shaped circuit of four bases. It is played chiefly in the US, Canada, Latin America, and East Asia",
+      "type": "noun",
+      "points": 45,
+      "categories": ["general"]
+    },
+
+	
+    "basement": {
+      "audio": "/assets/audio/basement.mp3",
+      "definition": "The floor of a building which is partly or entirely below ground level",
+      "type": "noun",
+      "points": 45,
+      "categories": ["general"]
+    },
+
+	
+    "basket": {
+      "audio": "/assets/audio/basket.mp3",
+      "definition": "A container used to hold or carry things, typically made from interwoven strips of cane or wire",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "biology": {
+      "audio": "/assets/audio/biology.mp3",
+      "definition": "The study of living organisms, divided into many specialized fields that cover their morphology, physiology, anatomy, behavior, origin, and distribution",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "boundary": {
+      "audio": "/assets/audio/boundary.mp3",
+      "definition": "A line that marks the limits of an area; a dividing line",
+      "type": "noun",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "burden": {
+      "audio": "/assets/audio/burden.mp3",
+      "definition": "Load heavily",
+      "type": "verb",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "cardboard": {
+      "audio": "/assets/audio/cardboard.mp3",
+      "definition": "Pasteboard or stiff paper",
+      "type": "noun",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "careless": {
+      "audio": "/assets/audio/careless.mp3",
+      "definition": "Not giving sufficient attention or thought to avoiding harm or errors",
+      "type": "adjective",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "chemistry": {
+      "audio": "/assets/audio/chemistry.mp3",
+      "definition": "The branch of science that deals with the identification of the substances of which matter is composed; the investigation of their properties and the ways in which they interact, combine, and change; and the use of these processes to form new substances",
+      "type": "noun",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "college": {
+      "audio": "/assets/audio/college.mp3",
+      "definition": "An educational institution or establishment, in particular one providing higher education or specialized professional or vocational training",
+      "type": "noun",
+      "points": 45,
+      "categories": ["general"]
+    },
+
+	
+    "crispy": {
+      "audio": "/assets/audio/crispy.mp3",
+      "definition": "(of food, typically cooked food) having a pleasingly firm, dry, and brittle surface or texture",
+      "type": "adjective",
+      "points": 40,
+      "categories": ["food", "general"]
+    },
+
+	
+    "describe": {
+      "audio": "/assets/audio/describe.mp3",
+      "definition": "Give an account in words of (someone or something), including all the relevant characteristics, qualities, or events",
+      "type": "verb",
+      "points": 45,
+      "categories": ["general"]
+    },
+
+	
+    "educate": {
+      "audio": "/assets/audio/educate.mp3",
+      "definition": "Give intellectual, moral, and social instruction to (someone, especially a child), typically at a school or university",
+      "type": "verb",
+      "points": 45,
+      "categories": ["general"]
+    },
+
+	
+    "emphasis": {
+      "audio": "/assets/audio/emphasis.mp3",
+      "definition": "Special importance, value, or prominence given to something",
+      "type": "noun",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "gossip": {
+      "audio": "/assets/audio/gossip.mp3",
+      "definition": "Casual or unconstrained conversation or reports about other people, typically involving details that are not confirmed as being true",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "install": {
+      "audio": "/assets/audio/install.mp3",
+      "definition": "Place or fix (equipment or machinery) in position ready for use",
+      "type": "verb",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "lawyer": {
+      "audio": "/assets/audio/lawyer.mp3",
+      "definition": "A person who practices or studies law; an attorney or a counselor",
+      "type": "noun",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "margin": {
+      "audio": "/assets/audio/margin.mp3",
+      "definition": "The edge or border of something",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "meantime": {
+      "audio": "/assets/audio/meantime.mp3",
+      "definition": "Meanwhile",
+      "type": "adverb",
+      "points": 50,
+      "categories": ["general"]
+    },
+
+	
+    "partner": {
+      "audio": "/assets/audio/partner.mp3",
+      "definition": "Either of a pair of people engaged together in the same activity",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "pillow": {
+      "audio": "/assets/audio/pillow.mp3",
+      "definition": "A rectangular cloth bag stuffed with feathers, foam rubber, or other soft materials, used to support the head when lying down",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "student": {
+      "audio": "/assets/audio/student.mp3",
+      "definition": "A person who is studying at a school or college",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    },
+
+	
+    "teacher": {
+      "audio": "/assets/audio/teacher.mp3",
+      "definition": "A person who teaches, especially in a school",
+      "type": "noun",
+      "points": 40,
+      "categories": ["general"]
+    }
+
+
+    },
+
+
+
+
+    
+
+    "difficult": {
+
+		
+    "appreciate": {
+      "audio": "/assets/audio/appreciate.mp3",
+      "definition": "Recognize the full worth of",
+      "type": "verb",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "background": {
+      "audio": "/assets/audio/background.mp3",
+      "definition": "The area or scenery behind the main object of contemplation, especially when perceived as a framework for it",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "chickenpox": {
+      "audio": "/assets/audio/chickenpox.mp3",
+      "definition": "An infectious disease causing a mild fever and a rash of itchy inflamed blisters. It is caused by the herpes zoster virus and mainly affects children, who are afterward usually immune",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "chimpanzee": {
+      "audio": "/assets/audio/chimpanzee.mp3",
+      "definition": "A great ape with large ears, mainly black coloration, and lighter skin on the face, native to the forests of western and central Africa. Chimpanzees show advanced behavior such as the making and using of tools",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general", "animals"]
+    },
+
+		
+    "circumstances": {
+      "audio": "/assets/audio/circumstances.mp3",
+      "definition": "Facts or conditions connected with or relevant to an event or action",
+      "type": "noun",
+      "points": 70,
+      "categories": ["general"]
+    },
+
+		
+    "condescending": {
+      "audio": "/assets/audio/condescending.mp3",
+      "definition": "Having or showing a feeling of patronizing superiority",
+      "type": "adjective",
+      "points": 75,
+      "categories": ["general"]
+    },
+
+		
+    "constitution": {
+      "audio": "/assets/audio/constitution.mp3",
+      "definition": "A body of fundamental principles or established precedents according to which a state or other organization is acknowledged to be governed",
+      "type": "noun",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "definitely": {
+      "audio": "/assets/audio/definitely.mp3",
+      "definition": "Without doubt (used for emphasis)",
+      "type": "adverb",
+      "points": 75,
+      "categories": ["general"]
+    },
+
+		
+    "demonstration": {
+      "audio": "/assets/audio/demonstration.mp3",
+      "definition": "The action or process of showing the existence or truth of something by giving proof or evidence",
+      "type": "noun",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "deoxidizer": {
+      "audio": "/assets/audio/deoxidizer.mp3",
+      "definition": "Any agent that reduces the oxygen content of a material",
+      "type": "noun",
+      "points": 70,
+      "categories": ["general"]
+    },
+
+		
+    "diminishing": {
+      "audio": "/assets/audio/diminishing.mp3",
+      "definition": "Make or become less",
+      "type": "verb",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "distinguish": {
+      "audio": "/assets/audio/distinguish.mp3",
+      "definition": "Recognize or treat (someone or something) as different",
+      "type": "verb",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "environment": {
+      "audio": "/assets/audio/environment.mp3",
+      "definition": "The surroundings or conditions in which a person, animal, or plant lives or operates",
+      "type": "noun",
+      "points": 70,
+      "categories": ["general"]
+    },
+
+		
+    "equivalent": {
+      "audio": "/assets/audio/equivalent.mp3",
+      "definition": "Equal in value, amount, function, meaning, etc",
+      "type": "adjective",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "fabrication": {
+      "audio": "/assets/audio/fabrication.mp3",
+      "definition": "The action or process of manufacturing or inventing something",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "fabulously": {
+      "audio": "/assets/audio/fabulously.mp3",
+      "definition": "Extremely well; wonderfully",
+      "type": "adverb",
+      "points": 70,
+      "categories": ["general"]
+    },
+
+		
+    "friendship": {
+      "audio": "/assets/audio/friendship.mp3",
+      "definition": "The emotions or conduct of close people; the state of being close people",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "generosity": {
+      "audio": "/assets/audio/generosity.mp3",
+      "definition": "The quality or fact of being plentiful or large",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "hypothesis": {
+      "audio": "/assets/audio/hypothesis.mp3",
+      "definition": "A supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation",
+      "type": "noun",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "identifiers": {
+      "audio": "/assets/audio/identifiers.mp3",
+      "definition": "Sequences of characters used to identify or refer to a program or an element, such as a variable or a set of data, within it",
+      "type": "noun",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "international": {
+      "audio": "/assets/audio/international.mp3",
+      "definition": "Existing, occurring, or carried on between two or more nations",
+      "type": "adjective",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "juxtaposition": {
+      "audio": "/assets/audio/juxtaposition.mp3",
+      "definition": "The fact of two things being seen or placed close together with contrasting effect",
+      "type": "noun",
+      "points": 70,
+      "categories": ["general"]
+    },
+
+		
+    "mesmerizing": {
+      "audio": "/assets/audio/mesmerizing.mp3",
+      "definition": "Capturing one's complete attention as if by magic",
+      "type": "adjective",
+      "points": 60,
+      "categories": ["general"]
+    },
+
+		
+    "retrospective": {
+      "audio": "/assets/audio/retrospective.mp3",
+      "definition": "Looking back on or dealing with past events or situations",
+      "type": "adjective",
+      "points": 65,
+      "categories": ["general"]
+    },
+
+		
+    "vocabulary": {
+      "audio": "/assets/audio/vocabulary.mp3",
+      "definition": "Words used on a particular occasion or in a particular sphere",
+      "type": "noun",
+      "points": 60,
+      "categories": ["general"]
+    }
+
+
+
+	
+
+  }
+}
