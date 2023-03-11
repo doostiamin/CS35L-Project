@@ -1,9 +1,25 @@
 const express = require('express');
 const fs = require('fs');
+const cors = require('cors');
 
 const USERS_DATA_FILE_PATH = './data/users.json';
 const PORT = 8080;
+const WHITELIST = ['http://localhost:3000'];
+const CORS_OPTIONS = {
+  origin: (origin, cb) => {
+    if(origin && WHITELIST.includes(origin)) {
+      cb(null, true);
+    } else {
+      cb(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}
+
 const app = express();
+
+// set up CORS
+app.use(cors(CORS_OPTIONS));
 
 // For parsing application/json
 app.use(express.json());
@@ -27,7 +43,7 @@ app.get('/', (req, res) => {
 app.get('/api/users', (req, res) => {
   let {success, data: users} = getUsers();
 
-  if(success) res.status(500);
+  if(!success) res.status(500);
 
   res.json({
     success: success,
