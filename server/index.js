@@ -74,7 +74,7 @@ app.post('/api/users', (req, res) => {
   res.json(data);
 });
 
-// Get points of a specific user
+// Get points of a specific user 
 app.get('/api/users/:name/points', (req, res) => {
   const name = req.params.name;
   let {success, data: users} = getUsers();
