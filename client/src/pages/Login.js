@@ -4,10 +4,13 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import welcome from '../assets/welcome.png';
 import axios from 'axios';
+import {UserContext} from './UserContext.js'
+
 
 const login = {
   margin: "5px"
 };
+
 
 const Interact = () => {
     
@@ -19,7 +22,7 @@ const Interact = () => {
     const [isSignup, setIsSignup] = useState(false);
 
 
-    function authenticate(){
+    function authenticate( setUname, setN, setPoints ){
         console.log("authenticating ", username);
 
         axios.get('http://localhost:8080/api/users')
@@ -30,12 +33,18 @@ const Interact = () => {
             var users = Object.keys(response.data.data);
 
             for(let i=0; i<users.length; i++){
-            //console.log(username, " vs ", users[i]);
-            if (username == users[i])
-                valid = true;
+                //console.log(username, " vs ", users[i]);
+                if (username == users[i]){  
+                    valid = true;
+                    
+                    // set context
+                    setPoints(response.data.data[username].points);
+                    setUname(username);
+                    setN(response.data.data[username].name);
+                }
             }
 
-            if(valid){
+            if(valid){  
                 console.log("AUTHENTICATED");
                 navigate('/homepage');
             }
@@ -133,34 +142,38 @@ const Interact = () => {
     // display login fields
     else{
         return (
-            <Box>
-            <Box display="flex">
+            <UserContext.Consumer>
+            {({ uname, setUname, n, setN, points, setPoints}) => (   
+                <Box>
                 <Box display="flex">
-                <TextField id="username" 
-                    type="userxname" 
-                    placeholder="username" 
-                    onChange={(e) => setUsername(e.target.value)}
-                    sx={login}
-                />
+                    <Box display="flex">
+                    <TextField id="username" 
+                        type="userxname" 
+                        placeholder="username" 
+                        onChange={(e) => setUsername(e.target.value)}
+                        sx={login}
+                    />
+                    </Box>
+                    <Button variant="outlined" 
+                    onClick={() => authenticate(setUname, setN, setPoints)}
+                    sx={{
+                        margin: "5px", 
+                        width: "100px"
+                    }}
+                    >login</Button>
+                
                 </Box>
+                <Box align="center" width="100%" sx = {{mt: "5vh", mb:"10px"}}>Don't have an account yet? </Box>
                 <Button variant="outlined" 
-                onClick={() => authenticate()}
-                sx={{
-                    margin: "5px", 
-                    width: "100px"
-                }}
-                >login</Button>
-            
-            </Box>
-            <Box align="center" width="100%" sx = {{mt: "5vh", mb:"10px"}}>Don't have an account yet? </Box>
-            <Button variant="outlined" 
-                onClick={() => setIsSignup(true)}
-                sx={{
-                    margin: "5px",
-                    width: "100%"
-                }}
-                >sign up</Button>
-            </Box>
+                    onClick={() => setIsSignup(true)}
+                    sx={{
+                        margin: "5px",
+                        width: "100%"
+                    }}
+                    >sign up</Button>
+                </Box>
+            )}
+            </UserContext.Consumer>
           );
     }
 }

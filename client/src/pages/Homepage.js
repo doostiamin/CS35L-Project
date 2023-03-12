@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import { display, maxHeight } from '@mui/system';
 import { Link } from "react-router-dom";
 import Stack from '@mui/material/Stack';
+import { UserContext } from "./UserContext.js";
+import { React } from 'react';
 
 const boxSidePanel = {
     display: "flex",
@@ -28,52 +30,59 @@ function getUserInfo() {
     //TODO
 }
 
-export default function Homepage(props) {
+const Homepage = () => {
+    
     return (
-    <div id="homepage">
-        <Stack direction="row">
-            <Box sx={boxSidePanel} justifyContent="center" height="maxHeight">
-                <h2>Name</h2>
-                <h3>Points:1000</h3>
-                <div>
-                    <Link to="/leaderboard">
-                        <Button variant="outlined" sx={{height:40}}>Leaderboard</Button>
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/login">
-                        <Button variant="outlined" color="error" sx={{height:40}}>Logout</Button>
-                    </Link>
-            </div>
-            </Box>
-            <Box sx={boxSpell} alignItems="center" justifyContent="center">
-                <h1><span role="img">🐝 </span>Spell!<span role="img"> 🐝</span></h1>
-                <h2>By Difficulty</h2>
-                <div>
-                    <Link to="/spell" state={{difficulty: "easy"}}>
-                        <Button variant="outlined" sx={{height:40}}>Easy</Button>
-                    </Link>        
-                    <Link to="/spell" state={{difficulty: "intermediate"}}>
-                        <Button variant="outlined" sx={{height:40}}>Intermediate</Button>
-                    </Link>
-                    <Link to="/spell" state={{difficulty: "difficult"}}>
-                        <Button variant="outlined" sx={{height:40}}>Difficult</Button>
-                    </Link>
-                </div>
-                <h2>By Topic</h2>
-                <div>
-                    <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>General</Button>
+    <UserContext.Consumer>
+    {({ uname, setUname, n, setN, points, setPoints }) => (    
+        <div id="homepage">
+            <Stack direction="row">
+                <Box sx={boxSidePanel} justifyContent="center" height="maxHeight">
+                    <h2>{n}</h2>
+                    <h3>Points: {points}</h3>
+                    <div>
+                        <Link to="/leaderboard">
+                            <Button variant="outlined" sx={{height:40}}>Leaderboard</Button>
                         </Link>
-                    <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Animals</Button>
-                    </Link>
-                    <Link to="/spell">
-                        <Button variant="outlined" sx={{height:40}}>Foods</Button>
-                    </Link>
+                    </div>
+                    <div>
+                        <Link to="/login">
+                            <Button variant="outlined" color="error" sx={{height:40}}>Logout</Button>
+                        </Link>
                 </div>
-            </Box>
-        </Stack>
-    </div>
+                </Box>
+                <Box sx={boxSpell} alignItems="center" justifyContent="center">
+                    <h1><span role="img">🐝 </span>Spell!<span role="img"> 🐝</span></h1>
+                    <h2>By Difficulty</h2>
+                    <div>
+                        <Link to="/spell" state={{difficulty: "easy"}}>
+                            <Button variant="outlined" sx={{height:40}}>Easy</Button>
+                        </Link>        
+                        <Link to="/spell" state={{difficulty: "intermediate"}}>
+                            <Button variant="outlined" sx={{height:40}}>Intermediate</Button>
+                        </Link>
+                        <Link to="/spell" state={{difficulty: "difficult"}}>
+                            <Button variant="outlined" sx={{height:40}}>Difficult</Button>
+                        </Link>
+                    </div>
+                    <h2>By Topic</h2>
+                    <div>
+                        <Link to="/spell">
+                            <Button variant="outlined" sx={{height:40}}>General</Button>
+                            </Link>
+                        <Link to="/spell">
+                            <Button variant="outlined" sx={{height:40}}>Animals</Button>
+                        </Link>
+                        <Link to="/spell">
+                            <Button variant="outlined" sx={{height:40}}>Foods</Button>
+                        </Link>
+                    </div>
+                </Box>
+            </Stack>
+        </div>
+    )}
+    </UserContext.Consumer>
     );
 }
+
+export default Homepage;

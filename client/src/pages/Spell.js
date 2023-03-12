@@ -2,9 +2,11 @@ import { Box, DialogContent, DialogTitle } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Link, useLocation } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Dialog from '@mui/material/Dialog';
 import data from '../data-objects.json';
+import { UserContext } from "./UserContext";
+import axios from 'axios';
 
 const boxDefault = {
     display: "flex",
@@ -19,6 +21,9 @@ const boxDefault = {
 }
 
 export default function Spell(props) {
+
+    const value = useContext(UserContext);
+
     const location = useLocation();
 
     //getting words list from data-objects.json
@@ -107,10 +112,28 @@ export default function Spell(props) {
         setOpenDefinition(false);
     }
 
+    
+    function addPoints (p) {
+            
+        // update in front
+        value.setPoints(value.points + p);
+
+        // update in back
+        axios.post('http://localhost:8080/api/users', {user: value.uname, info: {"name": value.n, "points": value.points + p}})
+        .then(function (response) {
+        if(response.data.success){
+            console.log("gave user ", value.uname, " ", p, " points");
+        }
+        }).catch(err=>{
+            console.log(err);
+        })
+    }
+
     function checkCorrect() {
         if (answer === word) {
             setOpenCorrect(true);
-            //TODO: set point values
+            // TODO: award points based on the word
+            addPoints(10);
         }
         else {
             setOpenIncorrect(true);
@@ -142,7 +165,7 @@ export default function Spell(props) {
        new Audio(a).play()
    }
 
-    return (
+    return ( 
         <div id="spell">
             <Box sx={boxDefault}>
                 <div>
@@ -169,7 +192,7 @@ export default function Spell(props) {
                         </DialogContent>
                     </Dialog>
                     <TextField id="standard-basic" label="Answer" variant="standard" value={answer} onChange={(answer) => setAnswer(answer.target.value)}/>
-                    <Button variant="contained" sx={{height:40}} onClick={checkCorrect}>Enter</Button>
+                    <Button variant="contained" sx={{height:40}} onClick={() => checkCorrect()}>Enter</Button>
                 </div>
                 <div>
                     <Dialog
