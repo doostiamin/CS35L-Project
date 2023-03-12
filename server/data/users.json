@@ -1,10 +1,22 @@
 {
   "user1": {
-    "name": "Amin Doosti",
-    "points": 12
+    "name": "alsdf",
+    "points": 0
   },
   "user2": {
     "name": "John Doe",
     "points": 867
+  },
+  "hi": {
+    "name": "yo",
+    "points": 0
+  },
+  "hoho": {
+    "name": "yiyi",
+    "points": 0
+  },
+  "user": {
+    "name": "Pinky",
+    "points": 0
   }
 }
