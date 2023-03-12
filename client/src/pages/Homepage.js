@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Stack from '@mui/material/Stack';
 import { UserContext } from "./UserContext.js";
 import { React } from 'react';
+import axios from 'axios';
 
 const boxSidePanel = {
     display: "flex",
@@ -31,7 +32,25 @@ function getUserInfo() {
 }
 
 const Homepage = () => {
-    
+
+    const [searchTerm, setSearchTerm] = useState("");
+    const [searchResult, setSearchResult] = useState("");
+
+    const handleSearch = async () => {
+        try {
+            const response = await axios.get(`/api/users/:name/points${searchTerm}`);
+            const result = response.data;
+
+            if (result.success) {
+                setSearchResult(`Points for user ${searchTerm}: ${result.data}`);
+            } else {
+                setSearchResult(`User '${searchTerm}' not found`);
+            }
+        } catch (error) {
+            setSearchResult(`Error: ${error.message}`);
+        }
+    };
+
     return (
     <UserContext.Consumer>
     {({ uname, setUname, n, setN, points, setPoints }) => (    
