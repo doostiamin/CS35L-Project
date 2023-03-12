@@ -74,6 +74,25 @@ app.post('/api/users', (req, res) => {
   res.json(data);
 });
 
+// Get points of a specific user
+app.get('/api/users', (req, res) => {
+  const name = req.params.name;
+  let {success, data: users} = getUsers();
+
+  if(!success) res.status(500);
+
+  if(users.hasOwnProperty(name)) {
+    res.json({
+      success: true,
+      data: users[name].points
+    });
+  } else {
+    res.json({
+      success: false,
+      message: `User '${name}' not found`
+    });
+  }
+});
 
 /////////////////////////////////
 //         Server Setup        //
