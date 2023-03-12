@@ -67,12 +67,12 @@ const Interact = () => {
         }
 
         console.log("adding user ", username);
+        
+        var existing = false;
 
         // check if user already exists
         axios.get('http://localhost:8080/api/users')
         .then(function (response) {
-
-            var existing = false;
 
             var users = Object.keys(response.data.data);
 
@@ -84,17 +84,18 @@ const Interact = () => {
                 alert("Username taken. Try a different one!");
                 return;
             }
-        }).catch(err=>{
-            console.log(err);
-        })
-
-        // send user to server
-        axios.post('http://localhost:8080/api/users', {user: username, info: {"name": name, "points": 0}})
-        .then(function (response) {
-        if(response.data.success){
-            alert("Welcome, Bee Slayer " + name + "!");
-            setIsSignup(false);
-        }
+            else{
+                // send user to server
+                axios.post('http://localhost:8080/api/users', {user: username, info: {"name": name, "points": 0}})
+                .then(function (response) {
+                if(response.data.success){
+                    alert("Welcome, Bee Slayer " + name + "!");
+                    setIsSignup(false);
+                }
+                }).catch(err=>{
+                    console.log(err);
+                })
+            }
         }).catch(err=>{
             console.log(err);
         })
