@@ -7,17 +7,20 @@ import Dialog from '@mui/material/Dialog';
 import data from '../data-objects.json';
 import { UserContext } from "./UserContext";
 import axios from 'axios';
+import { borderColor } from '@mui/system';
 
 const boxDefault = {
     display: "flex",
     flexDirection: "column",
     justifyContents: "center",
-    height: 770,
+    height: "40vh",
+    width: 0.5,
     padding: 9,
-    minWidth: 600,
     m: 1,
     alignItems: "center",
-    gap: 2
+    gap: 2,
+    border: 1,
+    borderColor: "lightGray"
 }
 
 export default function Spell(props) {
@@ -301,62 +304,64 @@ export default function Spell(props) {
 
     return ( 
         <div id="spell">
-            <Box sx={boxDefault}>
-                <div>
-                    <Dialog
-                        open={openCorrect}
-                        onClose={handleCloseCorrect}>
-                        <DialogTitle>You Got It Right!</DialogTitle>
-                        <DialogContent>
-                        <Link to="/homepage">
-                                <Button>Back to Homepage</Button>
+            <Box sx={{display: "flex", width: 1, height: "100vh", alignItems: "center", justifyContent: "center"}}>
+                <Box sx={boxDefault}>
+                    <div>
+                        <Dialog
+                            open={openCorrect}
+                            onClose={handleCloseCorrect}>
+                            <DialogTitle>You Got It Right!</DialogTitle>
+                            <DialogContent>
+                            <Link to="/homepage">
+                                    <Button>Back to Homepage</Button>
+                                </Link>
+                                <Button onClick={handleCloseCorrect}>Next Word</Button>
+                            </DialogContent>
+                        </Dialog>
+                        <Dialog
+                            open={openIncorrect}
+                            onClose={handleCloseIncorrect}>
+                            <DialogTitle>Not Quite!</DialogTitle>
+                            <DialogContent>
+                            <Link to="/homepage">
+                                    <Button>Back to Homepage</Button>
+                                </Link>
+                                <Button onClick={(open) => setOpenIncorrect(false)}>Try Again</Button>
+                            </DialogContent>
+                        </Dialog>
+                        <Dialog
+                            open={openChallengeFail}
+                            onClose={handleCloseChallengeFail}>
+                            <DialogTitle>Good Try!</DialogTitle>
+                            <DialogContent>
+                            <p>Your Total Streak: {wordCount - 1}</p>
+                            <Link to="/homepage">
+                                    <Button>Back to Homepage</Button>
                             </Link>
-                            <Button onClick={handleCloseCorrect}>Next Word</Button>
-                        </DialogContent>
-                    </Dialog>
-                    <Dialog
-                        open={openIncorrect}
-                        onClose={handleCloseIncorrect}>
-                        <DialogTitle>Not Quite!</DialogTitle>
-                        <DialogContent>
+                            </DialogContent>
+                        </Dialog>
+                        <TextField id="standard-basic" label="Answer" variant="standard" value={answer} onChange={(answer) => setAnswer(answer.target.value)}/>
+                        <Button variant="contained" sx={{height:40}} onClick={() => checkCorrect()}>Enter</Button>
+                    </div>
+                    <div>
+                        <Dialog
+                            open={openDefinition}
+                            onClose={handleCloseDefinition}>
+                            <DialogContent>
+                                <p>{type}</p>
+                                <p>{definition}</p>
+                            </DialogContent>
+                        </Dialog>
+                        <Button variant="outlined" sx={{height:40}} onClick={playAudio}>Listen</Button>
+                        <Button variant="outlined" sx={{height:40}} onClick={() => setOpenDefinition(true)}>Definition</Button>
+                        <Button variant="outlined" sx={{height:40}} onClick={() => nextWord()}>Skip</Button>
+                    </div>
+                    <div>
                         <Link to="/homepage">
-                                <Button>Back to Homepage</Button>
-                            </Link>
-                            <Button onClick={(open) => setOpenIncorrect(false)}>Try Again</Button>
-                        </DialogContent>
-                    </Dialog>
-                    <Dialog
-                        open={openChallengeFail}
-                        onClose={handleCloseChallengeFail}>
-                        <DialogTitle>Good Try!</DialogTitle>
-                        <DialogContent>
-                        <p>Your Total Streak: {wordCount - 1}</p>
-                        <Link to="/homepage">
-                                <Button>Back to Homepage</Button>
+                        <Button variant="outlined" sx={{height:40}}>Back</Button>
                         </Link>
-                        </DialogContent>
-                    </Dialog>
-                    <TextField id="standard-basic" label="Answer" variant="standard" value={answer} onChange={(answer) => setAnswer(answer.target.value)}/>
-                    <Button variant="contained" sx={{height:40}} onClick={() => checkCorrect()}>Enter</Button>
-                </div>
-                <div>
-                    <Dialog
-                        open={openDefinition}
-                        onClose={handleCloseDefinition}>
-                        <DialogContent>
-                            <p>{type}</p>
-                            <p>{definition}</p>
-                        </DialogContent>
-                    </Dialog>
-                    <Button variant="outlined" sx={{height:40}} onClick={playAudio}>Listen</Button>
-                    <Button variant="outlined" sx={{height:40}} onClick={() => setOpenDefinition(true)}>Definition</Button>
-                    <Button variant="outlined" sx={{height:40}} onClick={() => nextWord()}>Skip</Button>
-                </div>
-                <div>
-                    <Link to="/homepage">
-                    <Button variant="outlined" sx={{height:40}}>Back</Button>
-                    </Link>
-                </div>
+                    </div>
+                </Box>
             </Box>
         </div>
     );

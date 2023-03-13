@@ -28,8 +28,20 @@ const boxSpell = {
     m: 1,
     alignItems: "center",
 }
-function getUserInfo() {
-    //TODO
+
+const buttonSX = {
+    height: 175,
+    width: 175,
+    color: "black",
+    borderColor: "black",
+}
+
+const containedButtonSX = {
+    height: 175,
+    width: 175,
+    color: "black",
+    borderColor: "black",
+    backgroundColor: "lightYellow"
 }
 
 const Homepage = () => {
@@ -62,7 +74,7 @@ const Homepage = () => {
                     <h3>Points: {points}</h3>
                     <div>
                         <Link to="/leaderboard">
-                            <Button variant="outlined" sx={{height:200, width:200}}>Leaderboard</Button>
+                            <Button variant="outlined" sx={{height:200, width:200, color: "black", borderColor: "black"}}>Leaderboard</Button>
                         </Link>
                     </div>
                     <div>
@@ -73,35 +85,33 @@ const Homepage = () => {
                 </Box>
                 <Box sx={boxSpell} alignItems="center" justifyContent="center">
                     <h1><span role="img">🐝 </span>Spell!<span role="img"> 🐝</span></h1>
-                    <h2>By Difficulty</h2>
-                    <Box sx={{display:'flex', width:1, justifyContent:'space-around'}}>
+                    <Link to="/spell" state={{difficulty: "general"}}>
+                            <Button variant="outlined" sx={containedButtonSX}>Start Spelling</Button>
+                    </Link>
+                    <h2>Spell By Difficulty</h2>
+                    <Box sx={{display:'flex', width:1, justifyContent:'space-evenly'}}>
                         <Link to="/spell" state={{difficulty: "easy"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>Easy</Button>
+                            <Button variant="outlined" sx={buttonSX}>Easy</Button>
                         </Link>        
                         <Link to="/spell" state={{difficulty: "intermediate"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>Intermediate</Button>
+                            <Button variant="outlined" sx={buttonSX}>Intermediate</Button>
                         </Link>
                         <Link to="/spell" state={{difficulty: "difficult"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>Difficult</Button>
+                            <Button variant="outlined" sx={buttonSX}>Difficult</Button>
                         </Link>
                     </Box>
-                    <h2>By Topic</h2>
-                    <Box sx={{display:'flex', width:1, justifyContent:'space-around'}}>
+                    <h2>Spell By Topic</h2>
+                    <Box sx={{display:'flex', width:1, justifyContent:'space-evenly'}}>
                         <Link to="/spell" state={{difficulty: "general"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>General</Button>
-                            </Link>
+                                <Button variant="outlined" sx={buttonSX}>All Words</Button>
+                        </Link>
                         <Link to="/spell" state={{difficulty: "animals"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>Animals</Button>
+                            <Button variant="outlined" sx={buttonSX}>Animals</Button>
                         </Link>
                         <Link to="/spell" state={{difficulty: "foods"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>Foods</Button>
+                            <Button variant="outlined" sx={buttonSX}>Foods</Button>
                         </Link>
                     </Box>
-                    <h2>Streak Challenge</h2>
-                    <p>Spell as many words as you can correctly in a row</p>
-                    <Link to="/spell" state={{difficulty: "challenge"}}>
-                            <Button variant="outlined" sx={{height:150, width:200}}>Start</Button>
-                    </Link> 
                 </Box>
             </Stack>
         </div>
