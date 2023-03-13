@@ -1,7 +1,20 @@
 # Introduction
 
 # Client
+This project uses React as its frontend. After cloning this project into your local environment, use the following instructions in order to get the client up and going
 
+```shell
+#change directory to the client folder
+cd client
+
+#install all the dependencies needed for this project
+npm i
+
+#run the program
+npm start
+```
+
+The client will start on port `3000`
 # Server
 
 This project uses NodeJS as its backend. After cloning this project into your local environment, use the following instructions in order to get the server up and going
