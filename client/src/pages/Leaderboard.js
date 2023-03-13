@@ -3,14 +3,15 @@ import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useState, setState, useEffect } from 'react'
+import leaderboardImg from '../assets/leaderboard.png';
 
 // React component, row of the leaderboard
 function Row({name, points}){
 
   return(
     <TableRow>
-      <TableCell>{name}</TableCell>
-      <TableCell>{points}</TableCell>
+      <TableCell align="center">{name}</TableCell>
+      <TableCell align="center">{points}</TableCell>
     </TableRow>
   );
 }
@@ -51,14 +52,17 @@ export default function Leaderboard() {
   }
   
   return (
-    <Box height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Box height="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Box display="flex" width="30vw">
+            <img src={leaderboardImg} className="leaderboard-image" alt = "welcome" width="100%"/>
+      </Box>
       <Box width = "30%">
         <TableContainer>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell><h3>username</h3></TableCell>
-                <TableCell><h3>points</h3></TableCell>
+                <TableCell align="center"><h3>username</h3></TableCell>
+                <TableCell align="center"><h3>points</h3></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
