@@ -1,15 +1,15 @@
 {
   "user1": {
-    "name": "alsdf",
+    "name": "Alfred",
     "points": 0
   },
   "user2": {
     "name": "John Doe",
-    "points": 867
+    "points": 907
   },
   "hi": {
     "name": "yo",
-    "points": 0
+    "points": 20
   },
   "hoho": {
     "name": "yiyi",
@@ -17,6 +17,30 @@
   },
   "user": {
     "name": "Pinky",
+    "points": 0
+  },
+  "user3": {
+    "name": "hello",
+    "points": 0
+  },
+  "login": {
+    "name": "bee",
+    "points": 0
+  },
+  "kath": {
+    "name": "Katherine Sohn",
+    "points": 20
+  },
+  "blue": {
+    "name": "doggie",
+    "points": 0
+  },
+  "pink": {
+    "name": "doge",
+    "points": 20
+  },
+  "spelling": {
+    "name": "bee",
     "points": 0
   }
 }

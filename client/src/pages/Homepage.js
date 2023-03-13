@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Stack from '@mui/material/Stack';
 import { UserContext } from "./UserContext.js";
 import { React, useState } from 'react';
-import axios from 'axios';
 
 const boxSidePanel = {
     display: "flex",
