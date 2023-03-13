@@ -125,7 +125,7 @@ export default function Spell(props) {
             return(difficultWords);
         }
         //getting all category words
-        else if (param === "general") {
+        else if (param === "general" || param === "challenge") {
             let general = getCategory("general")
             shuffle(general);
             categoryLength = categoryWords.length;
@@ -172,7 +172,7 @@ export default function Spell(props) {
         if (param === "difficult") {
             return(data.difficult);
         }
-        if (param === "general") {
+        if (param === "general" || param === "challenge") {
             return(getCategoryWord(0));
         }
         if (param === "animals") {
@@ -196,7 +196,8 @@ export default function Spell(props) {
     const [openCorrect, setOpenCorrect] = useState(false);
     const [openIncorrect, setOpenIncorrect] = useState(false);
     const [openDefinition, setOpenDefinition] = useState(false);
-
+    //challenge dialog states
+    const [openChallengeFail, setOpenChallengeFail] = useState(false);
 
     //word states
     let firstWord = wordSet[0];
@@ -208,9 +209,8 @@ export default function Spell(props) {
     console.log(pts);
     const [wordCount, setWordCount] = useState(1);
 
-    
-
     //dialog states
+ 
     const handleCloseCorrect = () => {
         setAnswer("");
         setOpenCorrect(false);
@@ -220,12 +220,15 @@ export default function Spell(props) {
     const handleCloseIncorrect = () => {
         setOpenIncorrect(false);
     };
+
+    const handleCloseChallengeFail = () => {
+        setOpenChallengeFail(false);
+    };
     
     const handleCloseDefinition = () => {
         setOpenDefinition(false);
     }
 
-    
     function addPoints (p) {
         // update in front
         value.setPoints(value.points + p);
@@ -250,7 +253,12 @@ export default function Spell(props) {
             addPoints(pts);    
         }
         else {
-            setOpenIncorrect(true);
+            if (state === "challenge") {
+                setOpenChallengeFail(true);
+            }
+            else {
+                setOpenIncorrect(true);
+            }                
         }
     }
 
@@ -315,6 +323,17 @@ export default function Spell(props) {
                                 <Button>Back to Homepage</Button>
                             </Link>
                             <Button onClick={(open) => setOpenIncorrect(false)}>Try Again</Button>
+                        </DialogContent>
+                    </Dialog>
+                    <Dialog
+                        open={openChallengeFail}
+                        onClose={handleCloseChallengeFail}>
+                        <DialogTitle>Good Try!</DialogTitle>
+                        <DialogContent>
+                        <p>Your Total Streak: {wordCount - 1}</p>
+                        <Link to="/homepage">
+                                <Button>Back to Homepage</Button>
+                        </Link>
                         </DialogContent>
                     </Dialog>
                     <TextField id="standard-basic" label="Answer" variant="standard" value={answer} onChange={(answer) => setAnswer(answer.target.value)}/>

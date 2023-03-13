@@ -16,12 +16,13 @@ const boxSidePanel = {
     m: 1,
     alignItems: "center",
     backgroundColor: 'LightYellow',
+    gap: 10,
 }
 
 const boxSpell = {
     display: "flex",
     flexDirection: "column",
-    height: 780,
+    height: "100vh",
     width:0.75,
     padding: 2,
     m: 1,
@@ -61,41 +62,46 @@ const Homepage = () => {
                     <h3>Points: {points}</h3>
                     <div>
                         <Link to="/leaderboard">
-                            <Button variant="outlined" sx={{height:40}}>Leaderboard</Button>
+                            <Button variant="outlined" sx={{height:200, width:200}}>Leaderboard</Button>
                         </Link>
                     </div>
                     <div>
                         <Link to="/login">
-                            <Button variant="outlined" color="error" sx={{height:40}}>Logout</Button>
+                            <Button variant="outlined" color="error" sx={{height:30, width: 200}}>Logout</Button>
                         </Link>
                 </div>
                 </Box>
                 <Box sx={boxSpell} alignItems="center" justifyContent="center">
                     <h1><span role="img">🐝 </span>Spell!<span role="img"> 🐝</span></h1>
                     <h2>By Difficulty</h2>
-                    <div>
+                    <Box sx={{display:'flex', width:1, justifyContent:'space-around'}}>
                         <Link to="/spell" state={{difficulty: "easy"}}>
-                            <Button variant="outlined" sx={{height:40}}>Easy</Button>
+                            <Button variant="outlined" sx={{height:150, width:200}}>Easy</Button>
                         </Link>        
                         <Link to="/spell" state={{difficulty: "intermediate"}}>
-                            <Button variant="outlined" sx={{height:40}}>Intermediate</Button>
+                            <Button variant="outlined" sx={{height:150, width:200}}>Intermediate</Button>
                         </Link>
                         <Link to="/spell" state={{difficulty: "difficult"}}>
-                            <Button variant="outlined" sx={{height:40}}>Difficult</Button>
+                            <Button variant="outlined" sx={{height:150, width:200}}>Difficult</Button>
                         </Link>
-                    </div>
+                    </Box>
                     <h2>By Topic</h2>
-                    <div>
+                    <Box sx={{display:'flex', width:1, justifyContent:'space-around'}}>
                         <Link to="/spell" state={{difficulty: "general"}}>
-                            <Button variant="outlined" sx={{height:40}}>General</Button>
+                            <Button variant="outlined" sx={{height:150, width:200}}>General</Button>
                             </Link>
                         <Link to="/spell" state={{difficulty: "animals"}}>
-                            <Button variant="outlined" sx={{height:40}}>Animals</Button>
+                            <Button variant="outlined" sx={{height:150, width:200}}>Animals</Button>
                         </Link>
                         <Link to="/spell" state={{difficulty: "foods"}}>
-                            <Button variant="outlined" sx={{height:40}}>Foods</Button>
+                            <Button variant="outlined" sx={{height:150, width:200}}>Foods</Button>
                         </Link>
-                    </div>
+                    </Box>
+                    <h2>Streak Challenge</h2>
+                    <p>Spell as many words as you can correctly in a row</p>
+                    <Link to="/spell" state={{difficulty: "challenge"}}>
+                            <Button variant="outlined" sx={{height:150, width:200}}>Start</Button>
+                    </Link> 
                 </Box>
             </Stack>
         </div>
