@@ -86,13 +86,13 @@ const Homepage = () => {
                     </div>
                     <h2>By Topic</h2>
                     <div>
-                        <Link to="/spell">
+                        <Link to="/spell" state={{difficulty: "general"}}>
                             <Button variant="outlined" sx={{height:40}}>General</Button>
                             </Link>
-                        <Link to="/spell">
+                        <Link to="/spell" state={{difficulty: "animals"}}>
                             <Button variant="outlined" sx={{height:40}}>Animals</Button>
                         </Link>
-                        <Link to="/spell">
+                        <Link to="/spell" state={{difficulty: "foods"}}>
                             <Button variant="outlined" sx={{height:40}}>Foods</Button>
                         </Link>
                     </div>

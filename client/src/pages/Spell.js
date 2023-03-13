@@ -23,31 +23,127 @@ const boxDefault = {
 export default function Spell(props) {
 
     const value = useContext(UserContext);
-
     const location = useLocation();
 
     //getting words list from data-objects.json
     let easyWords = Object.keys(data.easy);
     let intermediateWords = Object.keys(data.intermediate);
     let difficultWords = Object.keys(data.difficult);
-
-    //getting the word state
-    function loadWords(param) {
-        if (param === "easy") {
-            return(easyWords);
-        }
-        if (param === "intermediate") {
-            return(intermediateWords);
-        }
-        if (param === "difficult") {
-            return(difficultWords);
-        }
-    }
+    let categoryWords = [];
+    let categoryEasy = [];
+    let categoryIntermediate = [];
+    let categoryDifficult = [];
 
     //initializing word lengths
     let easyLength = easyWords.length;
     let intermediateLength = intermediateWords.length;
     let difficultLength = difficultWords.length;
+    let categoryLength = categoryWords.length;
+
+    function getCategory(state) {
+        //getting state words from easy
+        for(let i = 0; i < easyLength; i++) {
+            let w = data.easy[easyWords[i]];
+            let wordCategories = w.categories;
+            for (let j = 0; j < wordCategories.length; j++) {
+                if (wordCategories[j] === state) {
+                    categoryWords.push(easyWords[i]);
+                    categoryEasy.push(easyWords[i]);
+                }
+            }
+        }
+        //getting state words from intermediate
+        for(let i = 0; i < intermediateLength; i++) {
+            let w = data.intermediate[intermediateWords[i]];
+            let wordCategories = w.categories;
+            for (let j = 0; j < wordCategories.length; j++) {
+                if (wordCategories[j] === state) {
+                    categoryWords.push(intermediateWords[i]);
+                    categoryIntermediate.push(intermediateWords[i]);
+                }
+            }
+        }
+        //getting state words from difficult
+        for(let i = 0; i < difficultLength; i++) {
+            let w = data.difficult[difficultWords[i]];
+            let wordCategories = w.categories;
+            for (let j = 0; j < wordCategories.length; j++) {
+                if (wordCategories[j] === state) {
+                    categoryWords.push(difficultWords[i]);
+                    categoryDifficult.push(difficultWords[i]);
+                }
+            }
+        }
+        return(categoryWords);
+    }
+
+    function getCategoryWord(index) {
+        let nextWord = categoryWords[index];
+        //search for word in easyWords
+        for (let i = 0; i < categoryEasy.length; i++) {
+            if (nextWord === categoryEasy[i]) {
+                return(data.easy);
+            }
+        }
+        //search for word in intermediateWords
+        for (let i = 0; i < categoryIntermediate.length; i++) {
+            if (nextWord === categoryIntermediate[i]) {
+                return(data.intermediate);
+            }
+        }
+        //search for word in difficultWords
+        for (let i = 0; i < categoryDifficult.length; i++) {
+            if (nextWord === categoryDifficult[i]) {
+                return(data.difficult);
+            }
+        }
+    }
+
+    //shuffles words in array list
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    //getting the word state
+    function loadWords(param) {
+        //loading by difficulty
+        if (param === "easy") {
+            shuffle(easyWords);
+            return(easyWords);
+        }
+        else if (param === "intermediate") {
+            shuffle(intermediateWords);
+            return(intermediateWords);
+        }
+        else if (param === "difficult") {
+            shuffle(difficultWords);
+            return(difficultWords);
+        }
+        //getting all category words
+        else if (param === "general") {
+            let general = getCategory("general")
+            shuffle(general);
+            categoryLength = categoryWords.length;
+            return(general);
+        }
+        else if (param === "foods") {
+            let foods = getCategory("foods")
+            shuffle(foods);
+            categoryLength = categoryWords.length;
+            return(foods);
+        }
+        else if (param === "animals") {
+            let animals = getCategory("animals")
+            shuffle(animals);
+            categoryLength = categoryWords.length;
+            return(animals);
+        }
+    }
 
     function loadWordSetLengths(param) {
         if (param === "easy") {
@@ -58,6 +154,10 @@ export default function Spell(props) {
         }
         if (param === "difficult") {
             return(difficultLength);
+        }
+        //if not difficulty level, it's category based
+        else {
+            return(categoryLength);
         }
     }
 
@@ -71,6 +171,17 @@ export default function Spell(props) {
         }
         if (param === "difficult") {
             return(data.difficult);
+        }
+        if (param === "general") {
+            return(getCategoryWord(0));
+        }
+        if (param === "animals") {
+            //FIXME (change this later)
+            return(getCategoryWord(0));
+        }
+        if (param === "foods") {
+            //FIXME (change this later)
+            return(getCategoryWord(0));
         }
     }
 
@@ -93,6 +204,8 @@ export default function Spell(props) {
     const [type, setType] = useState(difficulty[firstWord].type);
     const [definition, setDefinition] = useState(difficulty[firstWord].definition);
     const [audio, setAudio] = useState(difficulty[firstWord].audio);
+    const [pts, setPts] = useState(difficulty[firstWord].points);
+    console.log(pts);
     const [wordCount, setWordCount] = useState(1);
 
     
@@ -114,7 +227,6 @@ export default function Spell(props) {
 
     
     function addPoints (p) {
-            
         // update in front
         value.setPoints(value.points + p);
 
@@ -130,10 +242,12 @@ export default function Spell(props) {
     }
 
     function checkCorrect() {
+        console.log(answer);
+        console.log(word);
         if (answer === word) {
             setOpenCorrect(true);
-            // TODO: award points based on the word
-            addPoints(10);
+            console.log(pts); 
+            addPoints(pts);    
         }
         else {
             setOpenIncorrect(true);
@@ -141,14 +255,26 @@ export default function Spell(props) {
     }
 
     function nextWord() {
-        let nextWord = wordSet[wordCount];
-        let set = difficulty;
+        let nextWord;
+        let set;
+        //for difficulty
+        if(state === "easy" || state === "intermediate" || state === "difficult") {
+            set = difficulty;
+            nextWord = wordSet[wordCount];
+        }
+
+        else {
+            nextWord = categoryWords[wordCount];
+            set = getCategoryWord(wordCount);
+        }
 
         setAnswer("");
         setWord(nextWord);
         setDefinition(set[nextWord].definition);
         setType(set[nextWord].type);
         setAudio(set[nextWord].audio);
+        setPts(set[nextWord.points]);
+        console.log(pts);
 
         // looping back through the words if reach the end of the list
         if (wordCount + 1 < wordSetLength) {
@@ -159,7 +285,7 @@ export default function Spell(props) {
         }
     }
 
-   function playAudio() {
+    function playAudio() {
        //format /assets/audio/audio_file.mp3
        let a = process.env.PUBLIC_URL + audio;
        new Audio(a).play()
