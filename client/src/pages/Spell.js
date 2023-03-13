@@ -273,7 +273,7 @@ export default function Spell(props) {
         setDefinition(set[nextWord].definition);
         setType(set[nextWord].type);
         setAudio(set[nextWord].audio);
-        setPts(set[nextWord.points]);
+        setPts(set[nextWord].points);
         console.log(pts);
 
         // looping back through the words if reach the end of the list
