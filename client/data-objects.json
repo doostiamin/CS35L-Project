@@ -1,5 +1,184 @@
 {
   "easy": {
+
+    "acai": {
+      "audio": "/assets/audio/acai.mp3",
+      "definition": "The small edible blackish-purple berries of a South American palm tree",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+    
+    "bean": {
+      "audio": "/assets/audio/bean.mp3",
+      "definition": "An edible seed, typically kidney-shaped, growing in long pods on certain leguminous plants.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "beef": {
+      "audio": "/assets/audio/beef.mp3",
+      "definition": "The flesh of a cow, bull, or ox, used as food.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "": {
+      "audio": "/assets/audio/.mp3",
+      "definition": "",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "beet": {
+      "audio": "/assets/audio/beet.mp3",
+      "definition": "A herbaceous plant widely cultivated as a source of food for humans and livestock, and for processing into sugar. Some varieties are grown for their leaves and some for their large nutritious root.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "cake": {
+      "audio": "/assets/audio/cake.mp3",
+      "definition": "An item of soft, sweet food made from a mixture of flour, shortening, eggs, sugar, and other ingredients, baked and often decorated.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "clam": {
+      "audio": "/assets/audio/clam.mp3",
+      "definition": "A marine bivalve mollusk with shells of equal size.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "corn": {
+      "audio": "/assets/audio/corn.mp3",
+      "definition": "a North American cereal plant that yields large grains, or kernels, set in rows on a cob. Its many varieties yield numerous products, highly valued for both human and livestock consumption",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "dill": {
+      "audio": "/assets/audio/dill.mp3",
+      "definition": "An aromatic annual herb of the parsley family, with fine blue-green leaves and yellow flowers. The leaves and seeds of dill are used for flavoring and for medicinal purposes",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "feta": {
+      "audio": "/assets/audio/feta.mp3",
+      "definition": "White salty Bulgarian cheese made from the milk of ewes or goats.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "fish": {
+      "audio": "/assets/audio/fish.mp3",
+      "definition": "A limbless cold-blooded vertebrate animal with gills and fins and living wholly in water.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "kiwi": {
+      "audio": "/assets/audio/kiwi.mp3",
+      "definition": "The edible fruit of a Chinese gooseberry having a fuzzy brown skin and slightly acidic typically green flesh",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "mint": {
+      "audio": "/assets/audio/mint.mp3",
+      "definition": "An aromatic plant native to temperate regions of the Old World, several kinds of which are used as culinary herbs.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "oreo": {
+      "audio": "/assets/audio/oreo.mp3",
+      "definition": "A brand of chocolate sandwich cookie with a creamy white filling.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "pear": {
+      "audio": "/assets/audio/pear.mp3",
+      "definition": "A yellowish- or brownish-green edible fruit that is typically narrow at the stalk and wider toward the base, with sweet, slightly gritty flesh.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "salt": {
+      "audio": "/assets/audio/salt.mp3",
+      "definition": "A white crystalline substance that gives seawater its characteristic taste and is used for seasoning or preserving food.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "soup": {
+      "audio": "/assets/audio/soup.mp3",
+      "definition": "A liquid dish, typically made by boiling meat, fish, or vegetables, etc., in stock or water.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "taco": {
+      "audio": "/assets/audio/taco.mp3",
+      "definition": "A Mexican dish consisting of a fried tortilla, typically folded, filled with various mixtures, such as seasoned meat, beans, lettuce, and tomatoes",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "tofu": {
+      "audio": "/assets/audio/tofu.mp3",
+      "definition": "Curd made from mashed soybeans, used chiefly in Asian and vegetarian cooking.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
+    
+    "tart": {
+      "audio": "/assets/audio/tart.mp3",
+      "definition": "An open pastry case containing a filling.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "food"]
+    },
+
     "koala": {
       "audio": "/assets/audio/koala.mp3",
       "definition": "A bearlike arboreal Australian marsupial that has thick gray fur and feeds on eucalyptus leaves",
@@ -218,7 +397,7 @@
 
     "cusp": {
       "audio": "/assets/audio/cusp.mp3",
-      "definition": "a point of transition between two different states.",
+      "definition": "a point of transition between two states.",
       "type": "noun",
       "points": 20,
       "categories": ["general"]
@@ -370,6 +549,166 @@
     
 
     "intermediate": {
+
+      "broccoli": {
+        "audio": "/assets/audio/broccoli.mp3",
+        "definition": "A cultivated variety of cabbage bearing heads of green or purplish flower buds that are eaten as a vegetable.",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+        
+      "chestnut": {
+        "audio": "/assets/audio/chestnut.mp3",
+        "definition": "A glossy brown nut that may be roasted and eaten",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+        
+      "chickpea": {
+        "audio": "/assets/audio/chickpea.mp3",
+        "definition": "A round yellowish seed, used widely as food",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+                
+      "eggplant": {
+        "audio": "/assets/audio/eggplant.mp3",
+        "definition": "The purple egg-shaped fruit of a tropical Old World plant, which is eaten as a vegetable.",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+                
+      "hazelnut": {
+        "audio": "/assets/audio/.mp3",
+        "definition": "A round brown hard-shelled treenut that is edible",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+                
+      "honeydew": {
+        "audio": "/assets/audio/.mp3",
+        "definition": "a melon of a variety with smooth pale skin and sweet green flesh.",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+                
+      "mulberry": {
+        "audio": "/assets/audio/mulberry.mp3",
+        "definition": "A small deciduous tree with broad leaves, native to East Asia and long cultivated elsewhere.",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+                
+      "zucchini": {
+        "audio": "/assets/audio/zucchini.mp3",
+        "definition": "A green variety of smooth-skinned summer squash.",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general", "food"]
+        },
+                
+      "coconut": {
+        "audio": "/assets/audio/coconut.mp3",
+        "definition": "The large, oval, brown seed of a tropical palm, consisting of a hard shell lined with edible white flesh and containing a clear liquid. It grows inside a woody husk, surrounded by fiber.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "food"]
+        },
+                
+      "parsnip": {
+        "audio": "/assets/audio/parsnip.mp3",
+        "definition": "A long tapering cream-colored root with a sweet flavor",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "food"]
+        },
+                
+      "brisket": {
+        "audio": "/assets/audio/brisket.mp3",
+        "definition": "A meat cut from the breast of an animal, typically a cow",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "food"]
+        },
+                
+      "brownie": {
+        "audio": "/assets/audio/brownie.mp3",
+        "definition": "A small square of rich chocolate cake, typically containing nuts.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "food"]
+        },
+                
+      "lasagna": {
+        "audio": "/assets/audio/lasagna.mp3",
+        "definition": "A baked Italian dish consisting of wide strips of pasta cooked and layered with meat or vegetables, cheese, and tomato sauce.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "banana": {
+        "audio": "/assets/audio/banana.mp3",
+        "definition": "A long curved fruit which grows in clusters and has soft pulpy flesh and yellow skin when ripe.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "almond": {
+        "audio": "/assets/audio/almond.mp3",
+        "definition": "the oval edible nutlike seed (kernel) of a tree, growing in a woody shell, widely used as food.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "ginger": {
+        "audio": "/assets/audio/ginger.mp3",
+        "definition": "A hot, fragrant spice made from the rhizome of a plant, which may be chopped or powdered for cooking, preserved in syrup, or candied.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "muffin": {
+        "audio": "/assets/audio/muffin.mp3",
+        "definition": "A small domed cake or quick bread made from batter or dough.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "oyster": {
+        "audio": "/assets/audio/oyster.mp3",
+        "definition": "Any of a number of bivalve mollusks with rough irregular shells. Several kinds are eaten (especially raw) as a delicacy and may be farmed for food or pearls.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "samosa": {
+        "audio": "/assets/audio/samosa.mp3",
+        "definition": "A triangular savory pastry fried in ghee or oil, containing spiced vegetables or meat.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
+                
+      "yogurt": {
+        "audio": "/assets/audio/yogurt.mp3",
+        "definition": "A semisolid food prepared from milk fermented by added bacteria, often sweetened and flavored.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "food"]
+        },
 
       "leopard": {
         "audio": "/assets/audio/leopard.mp3",
@@ -762,6 +1101,166 @@
     
 
     "difficult": {
+
+      "strawberry": {
+        "audio": "/assets/audio/strawberry.mp3",
+        "definition": "a sweet soft red fruit with a seed-studded surface",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+            
+      "cantaloupe": {
+        "audio": "/assets/audio/cantaloupe.mp3",
+        "definition": "A small round melon of a variety with orange flesh and ribbed skin",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "gooseberry": {
+        "audio": "/assets/audio/gooseberry.mp3",
+        "definition": "A round edible yellowish-green or reddish berry with a thin translucent hairy skin",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "grapefruit": {
+        "audio": "/assets/audio/grapefruit.mp3",
+        "definition": "A large round yellow citrus fruit with an acid juicy pulp.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "watermelon": {
+        "audio": "/assets/audio/watermelon.mp3",
+        "definition": "The large fruit of a plant of the gourd family, with smooth green skin, red pulp, and watery juice.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "chanterelle": {
+        "audio": "/assets/audio/chanterelle.mp3",
+        "definition": "an edible woodland mushroom with a yellow funnel-shaped cap and a faint smell of apricots, found in both Eurasia and North America.",
+        "type": "noun",
+        "points": 75,
+        "categories": ["general", "food"]
+        },
+             
+      "boysenberry": {
+        "audio": "/assets/audio/boysenberry.mp3",
+        "definition": "A large red edible fruit resembling a blackberry",
+        "type": "noun",
+        "points": 65,
+        "categories": ["general", "food"]
+        },
+             
+      "cauliflower": {
+        "audio": "/assets/audio/cauliflower.mp3",
+        "definition": "A cabbage of a variety which bears a large immature flower head of small creamy-white flower buds.",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general", "food"]
+        },
+             
+      "horseradish": {
+        "audio": "/assets/audio/horseradish.mp3",
+        "definition": "A European plant of the cabbage family with long leaves like those of the dock, grown for its pungent edible root.",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general", "food"]
+        },
+             
+      "clementine": {
+        "audio": "/assets/audio/clementine.mp3",
+        "definition": "A tangerine of a deep orange-red North African variety which is grown around the Mediterranean and in South Africa.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "cheesecake": {
+        "audio": "/assets/audio/cheesecake.mp3",
+        "definition": "A kind of rich dessert cake made with cream and soft cheese on a graham cracker, cookie, or pastry crust, typically topped with a fruit sauce.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "cornflakes": {
+        "audio": "/assets/audio/cornflakes.mp3",
+        "definition": "A type of breakfast cereal ",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "mayonnaise": {
+        "audio": "/assets/audio/mayonnaise.mp3",
+        "definition": "A thick creamy dressing consisting of egg yolks beaten with oil and vinegar and seasoned.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "mozzarella": {
+        "audio": "/assets/audio/mozzarella.mp3",
+        "definition": "a mild, semisoft white Italian cheese, often used in Italian cooking as a melted topping, especially on pizzas",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general", "food"]
+        },
+             
+      "gingerbread": {
+        "audio": "/assets/audio/gingerbread.mp3",
+        "definition": "A cake made with molasses and flavored with ginger.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "marshmallow": {
+        "audio": "/assets/audio/marshmallow.mp3",
+        "definition": "A soft, chewy confection made with sugar and gelatin.",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general", "food"]
+        },
+             
+      "pumpernickel": {
+        "audio": "/assets/audio/pumpernickel.mp3",
+        "definition": "A typically dense, slightly sweet rye bread traditionally made with sourdough starter and coarsely ground rye.",
+        "type": "noun",
+        "points": 75,
+        "categories": ["general", "food"]
+        },
+             
+      "mortadella": {
+        "audio": "/assets/audio/mortadella.mp3",
+        "definition": "A baked Italian dish consisting of wide strips of pasta cooked and layered with meat or vegetables, cheese, and tomato sauce.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "elderberry": {
+        "audio": "/assets/audio/elderberry.mp3",
+        "definition": "The bluish-black or red berry of a bush, used especially for making jelly or wine",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
+             
+      "dragonfruit": {
+        "audio": "/assets/audio/dragonfruit.mp3",
+        "definition": "A  large usually oval to oblong fruit of any of several erect, sprawling, or vining cacti (as of the genera Selenicereus, Hylocereus, or Sternocereus) that has leathery skin with prominent scaly spikes and juicy flesh",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "food"]
+        },
 
       "elephant": {
         "audio": "/assets/audio/elephant.mp3",
