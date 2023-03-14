@@ -97,14 +97,14 @@ const Homepage = () => {
                     <Box display="flex" justifyContent="center" width="50vw" sx = {{mb: "2%"}}>
                         <img src={spellImg} className="spell-image" alt = "spell" width="70%"/>
                     </Box>
-                    <Link to="/spell" state={{difficulty: "general"}} style={link}>
+                    <Link to="/spell" state={{difficulty: "challenge"}} style={link}>
                             <Button variant="outlined" sx={{height: 175,
                                                             width: "40vw",
                                                             color: "black",
                                                             borderColor: "black",
                                                             backgroundColor: "lightYellow", 
                                                             fontSize:"40px",
-                                                            mb: "5%"}}>Start Spelling</Button>
+                                                            mb: "5%"}}>Challenge Mode</Button>
                     </Link>
                     <h1>Spell By Difficulty</h1>
                     <br/>
