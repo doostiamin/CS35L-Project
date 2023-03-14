@@ -54,7 +54,7 @@ export default function Leaderboard() {
   return (
     <Box height="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <Box display="flex" width="30vw">
-            <img src={leaderboardImg} className="leaderboard-image" alt = "welcome" width="100%"/>
+            <img src={leaderboardImg} className="leaderboard-image" alt = "leaderboard" width="100%"/>
       </Box>
       <Box width = "30%">
         <TableContainer>

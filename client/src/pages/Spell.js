@@ -8,12 +8,13 @@ import data from '../data-objects.json';
 import { UserContext } from "./UserContext";
 import axios from 'axios';
 import { borderColor } from '@mui/system';
+import spellImg from '../assets/spell.png';
 
 const boxDefault = {
     display: "flex",
     flexDirection: "column",
     justifyContents: "center",
-    height: "40vh",
+    width: "50vw",
     width: 0.5,
     padding: 9,
     m: 1,
@@ -304,8 +305,11 @@ export default function Spell(props) {
 
     return ( 
         <div id="spell">
-            <Box sx={{display: "flex", width: 1, height: "100vh", alignItems: "center", justifyContent: "center"}}>
+            <Box sx={{display: "flex", flexDirection: "column", width: 1, height: "100vh", alignItems: "center", justifyContent: "center"}}>
                 <Box sx={boxDefault}>
+                    <Box display="flex" width="50vw" sx = {{mb: "2%"}}>
+                        <img src={spellImg} className="spell-image" alt = "spell" width="100%"/>
+                    </Box>
                     <div>
                         <Dialog
                             open={openCorrect}
