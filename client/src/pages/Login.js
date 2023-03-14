@@ -212,11 +212,13 @@ const Login = () => {
                 </Alert>
             </Snackbar>
 
-            <Box display={'flex'} flexDirection={'column'} alignItems={'center'} sx={{background: 'rgba(255,255,255,0.4)', borderRadius: 10}} py={2} px={1}>
-                <Box display="block" width="30vw" sx = {{mb: 2}}>
-                    <img src={welcome} className="Welcome-image" alt = "welcome" width="100%"/>
+            <Box display={'grid'} sx={{background: 'rgba(255,255,255,0.4)', width: '100%', height: '100%', placeItems: 'center'}}>
+                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} py={2} px={1}>
+                    <Box display="block" width="30vw" sx = {{mb: 2}}>
+                        <img src={welcome} className="Welcome-image" alt = "welcome" width="100%"/>
+                    </Box>
+                    <Interact isSignup="false" setError={setError} setErrorMessage={setErrorMessage} setSuccess={setSuccess} setSuccessMessage={setSuccessMessage} />
                 </Box>
-                <Interact isSignup="false" setError={setError} setErrorMessage={setErrorMessage} setSuccess={setSuccess} setSuccessMessage={setSuccessMessage} />
             </Box>
         </Box>
     );
