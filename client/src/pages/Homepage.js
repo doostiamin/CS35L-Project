@@ -22,14 +22,14 @@ const boxSidePanel = {
     // minWidth: 100,
     // m: 1,
     alignItems: "center",
-    backgroundColor: 'rgba(255,255,255,0.6)',
+    backgroundColor: 'rgba(255,255,255,0.5)',
     gap: 2,
 }
 
 const boxSpell = {
     display: "flex",
     flexDirection: "row",
-    backgroundColor: 'rgba(255,255,255,0.6)',
+    backgroundColor: 'rgba(255,255,255,0.5)',
     height: '100%',
     // width:0.75,
     padding: 4,
@@ -95,7 +95,6 @@ const Homepage = () => {
                                                             width: '35vw',
                                                             color: "black",
                                                             backgroundColor: "rgba(255,255,255,0.1)", 
-                                                            borderRadius: 0,
                                                             border: '2px solid #000',
                                                             fontSize:"40px",
                                                             ':hover': {

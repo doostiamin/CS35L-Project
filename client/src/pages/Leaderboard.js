@@ -73,7 +73,7 @@ export default function Leaderboard() {
   
   return (
     <Box sx={{background: 'url("beehive2.jpg")', backgroundSize: 'cover'}}>
-      <Box height="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center" sx={{backgroundColor: 'rgba(255,255,255,0.4)', p: 4}}>
+      <Box height="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center" sx={{backgroundColor: 'rgba(255,255,255,0.5)', p: 4}}>
         <Box display="flex" width="30vw">
               <img src={leaderboardImg} className="leaderboard-image" alt = "leaderboard" width="100%"/>
         </Box>
