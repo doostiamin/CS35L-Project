@@ -1,5 +1,165 @@
 {
   "easy": {
+    "koala": {
+      "audio": "/assets/audio/koala.mp3",
+      "definition": "A bearlike arboreal Australian marsupial that has thick gray fur and feeds on eucalyptus leaves",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "horse": {
+      "audio": "/assets/audio/horse.mp3",
+      "definition": "A large plant-eating domesticated mammal with solid hoofs and a flowing mane and tail, used for riding, racing, and to carry and pull loads.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "zebra": {
+      "audio": "/assets/audio/zebra.mp3",
+      "definition": "An African wild horse with black-and-white stripes and an erect mane",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "rihno": {
+      "audio": "/assets/audio/rihno.mp3",
+      "definition": "massive powerful herbivorous odd-toed ungulate of southeast Asia and Africa having very thick skin and one or two horns on the snout",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general", "animals"]
+    },
+
+    "tiger": {
+      "audio": "/assets/audio/tiger.mp3",
+      "definition": "A very large solitary cat with a yellow-brown coat striped with black, native to the forests of Asia but becoming increasingly rare.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "hippo": {
+      "audio": "/assets/audio/hippo.mp3",
+      "definition": "Aa large heavy African animal with thick dark skin and short legs that lives in rivers and lakes",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general", "animals"]
+    },
+
+    "mouse": {
+      "audio": "/assets/audio/mouse.mp3",
+      "definition": "A small rodent that typically has a pointed snout, relatively large ears and eyes, and a long tail.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "sheep": {
+      "audio": "/assets/audio/sheep.mp3",
+      "definition": "A domesticated ruminant animal with a thick woolly coat and (typically only in the male) curving horns. It is kept in flocks for its wool or meat, and is proverbial for its tendency to follow others in the flock",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "camel": {
+      "audio": "/assets/audio/camel.mp3",
+      "definition": "A large, long-necked ungulate mammal of arid country, with long slender legs, broad cushioned feet, and either one or two humps on the back. Camels can survive for long periods without food or drink, chiefly by using up the fat reserves in their humps",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "llama": {
+      "audio": "/assets/audio/llama.mp3",
+      "definition": "A domesticated pack animal of the camel family found in the Andes, valued for its soft woolly fleece.",
+      "type": "noun",
+      "points": 30,
+      "categories": ["general", "animals"]
+    },
+
+    "bison": {
+      "audio": "/assets/audio/bison.mp3",
+      "definition": "A humpbacked shaggy-haired wild ox native to North America and Europe",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "hyena": {
+      "audio": "/assets/audio/hyena.mp3",
+      "definition": "A doglike African mammal with forelimbs that are longer than the hind limbs and an erect mane. Hyenas are noted as scavengers but most are also effective hunters",
+      "type": "noun",
+      "points": 25,
+      "categories": ["general", "animals"]
+    },
+
+    "dingo": {
+      "audio": "/assets/audio/dingo.mp3",
+      "definition": "A wild or half-domesticated dog with a sandy-colored coat, found in Australia.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "lion": {
+      "audio": "/assets/audio/lion.mp3",
+      "definition": "A large heavily built social cat (Panthera leo) of open or rocky areas chiefly of sub-Saharan Africa",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "wofl": {
+      "audio": "/assets/audio/wolf.mp3",
+      "definition": "A wild carnivorous mammal of the dog family, living and hunting in packs. It is native to both Eurasia and North America, but has been widely exterminated",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "bear": {
+      "audio": "/assets/audio/bear.mp3",
+      "definition": "A large, heavy mammal that walks on the soles of its feet, having thick fur and a very short tail. Bears are related to the dog family but most species are omnivorous.",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "deer": {
+      "audio": "/assets/audio/deer.mp3",
+      "definition": "A hoofed grazing or browsing animal, with branched bony antlers that are shed annually and typically borne only by the male",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "goat": {
+      "audio": "/assets/audio/goat.mp3",
+      "definition": "A farm animal or a wild animal that is about the size of a sheep with horns, and hairs on their chin which resemble a beard",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "duck": {
+      "audio": "/assets/audio/duck.mp3",
+      "definition": "A waterbird with a broad blunt bill, short legs, webbed feet, and a waddling gait",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
+    "seal": {
+      "audio": "/assets/audio/seal.mp3",
+      "definition": "A fish-eating aquatic mammal with a streamlined body and feet developed as flippers, that returns to land to breed or rest",
+      "type": "noun",
+      "points": 20,
+      "categories": ["general", "animals"]
+    },
+
     "bias": {
       "audio": "/assets/audio/bias.mp3",
       "definition": "Prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.",
@@ -210,468 +370,782 @@
     
 
     "intermediate": {
+
+      "leopard": {
+        "audio": "/assets/audio/leopard.mp3",
+        "definition": "A large, solitary cat that has a yellowish-brown or brown coat with black spots and usually hunts at night, widespread in the forests of Africa and southern Asia.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+
+      "cheetah": {
+        "audio": "/assets/audio/cheetah.mp3",
+        "definition": "A large spotted cat found in Africa and parts of Asia. It is the fastest animal on land",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "penguin": {
+        "audio": "/assets/audio/pengin.mp3",
+        "definition": "A large flightless seabird of the southern hemisphere, with black upper parts and white underparts and wings developed into flippers for swimming under water.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "giraffe": {
+        "audio": "/assets/audio/giraffe.mp3",
+        "definition": "A large African mammal with a very long neck and forelegs, having a coat patterned with brown patches separated by lighter lines. It is the tallest living animal.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "octopus": {
+        "audio": "/assets/audio/octopus.mp3",
+        "definition": "A cephalopod mollusc with eight sucker-bearing arms, a soft body, strong beaklike jaws, and no internal shell.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "dolphin": {
+        "audio": "/assets/audio/dolphin.mp3",
+        "definition": "A small gregarious toothed whale that typically has a beaklike snout and a curved fin on the back. Dolphins have become well known for their sociable nature and high intelligence.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "hamster": {
+        "audio": "/assets/audio/hamster.mp3",
+        "definition": "A solitary burrowing rodent with a short tail and large cheek pouches for carrying food, native to Europe and northern Asia",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "peacock": {
+        "audio": "/assets/audio/peacock.mp3",
+        "definition": "A large male bird with long blue and green tail feathers that it can spread out like a fan",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "raccoon": {
+        "audio": "/assets/audio/raccoon.mp3",
+        "definition": "A grayish-brown American mammal that has a foxlike face with a black mask and a ringed tail.",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general", "animals"]
+      },
+      
+      "jaguar": {
+        "audio": "/assets/audio/jaguar.mp3",
+        "definition": "A large heavily built cat that has a yellowish-brown coat with black spots, found mainly in the dense forests of Central and South America",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "parrot": {
+        "audio": "/assets/audio/parrot.mp3",
+        "definition": "A bird, often vividly colored, with a short down-curved hooked bill, grasping feet, and a raucous voice, found especially in the tropics and feeding on fruits and seeds. Many are popular as cage birds, and some are able to mimic the human voice",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "donkey": {
+        "audio": "/assets/audio/donkey.mp3",
+        "definition": "A domesticated hoofed mammal of the horse family with long ears and a braying call, used as a beast of burden; an ass",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "badger": {
+        "audio": "/assets/audio/badger.mp3",
+        "definition": "A heavily built omnivorous nocturnal mammal of the weasel family, typically having a gray and black coat",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "beaver": {
+        "audio": "/assets/audio/beaver.mp3",
+        "definition": "A large semiaquatic broad-tailed rodent that is native to North America and northern Eurasia. It is noted for its habit of gnawing through tree trunks to fell the trees in order to feed on the bark and build dams",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "falcon": {
+        "audio": "/assets/audio/falcon.mp3",
+        "definition": "A bird of prey with long pointed wings and a notched beak, typically catching prey by diving on it from above",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "bobcat": {
+        "audio": "/assets/audio/bobcat.mp3",
+        "definition": "A small North American cat species with a barred and spotted coat and a short tail",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "alpaca": {
+        "audio": "/assets/audio/alpaca.mp3",
+        "definition": "A long-haired domesticated South American mammal related to the llama, valued for its wool",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "turtle": {
+        "audio": "/assets/audio/turtle.mp3",
+        "definition": "A slow-moving reptile, enclosed in a scaly or leathery domed shell into which it can retract its head and thick legs",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "monkey": {
+        "audio": "/assets/audio/monkey.mp3",
+        "definition": "A small to medium-sized primate that typically has a long tail, most kinds of which live in trees in tropical countries.",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
+      
+      "weasle": {
+        "audio": "/assets/audio/weasle.mp3",
+        "definition": "A small, slender, carnivorous mammal related to, but generally smaller than, the stoat",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general", "animals"]
+      },
 	
-    "apartment": {
-      "audio": "/assets/audio/apartment.mp3",
-      "definition": "A suite of rooms forming one residence, typically in a building containing a number of these",
-      "type": "noun",
-      "points": 45,
-      "categories": ["general"]
-    },
+      "apartment": {
+        "audio": "/assets/audio/apartment.mp3",
+        "definition": "A suite of rooms forming one residence, typically in a building containing a number of these",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general"]
+      },
+
+    
+      "banish": {
+        "audio": "/assets/audio/banish.mp3",
+        "definition": "Send (someone) away from a country or place as an official punishment",
+        "type": "verb",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "baseball": {
+        "audio": "/assets/audio/baseball.mp3",
+        "definition": "A ball game played between two teams of nine on a field with a diamond-shaped circuit of four bases. It is played chiefly in the US, Canada, Latin America, and East Asia",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general"]
+      },
+
+    
+      "basement": {
+        "audio": "/assets/audio/basement.mp3",
+        "definition": "The floor of a building which is partly or entirely below ground level",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general"]
+      },
+
+    
+      "basket": {
+        "audio": "/assets/audio/basket.mp3",
+        "definition": "A container used to hold or carry things, typically made from interwoven strips of cane or wire",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "biology": {
+        "audio": "/assets/audio/biology.mp3",
+        "definition": "The study of living organisms, divided into many specialized fields that cover their morphology, physiology, anatomy, behavior, origin, and distribution",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "boundary": {
+        "audio": "/assets/audio/boundary.mp3",
+        "definition": "A line that marks the limits of an area; a dividing line",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "burden": {
+        "audio": "/assets/audio/trash.mp3",
+        "definition": "Load heavily",
+        "type": "verb",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "cardboard": {
+        "audio": "/assets/audio/cardboard.mp3",
+        "definition": "Pasteboard or stiff paper",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "careless": {
+        "audio": "/assets/audio/careless.mp3",
+        "definition": "Not giving sufficient attention or thought to avoiding harm or errors",
+        "type": "adjective",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "chemistry": {
+        "audio": "/assets/audio/chemistry.mp3",
+        "definition": "The branch of science that deals with the identification of the substances of which matter is composed; the investigation of their properties and the ways in which they interact, combine, and change; and the use of these processes to form new substances",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "college": {
+        "audio": "/assets/audio/college.mp3",
+        "definition": "An educational institution or establishment, in particular one providing higher education or specialized professional or vocational training",
+        "type": "noun",
+        "points": 45,
+        "categories": ["general"]
+      },
+
+    
+      "crispy": {
+        "audio": "/assets/audio/crispy.mp3",
+        "definition": "(of food, typically cooked food) having a pleasingly firm, dry, and brittle surface or texture",
+        "type": "adjective",
+        "points": 40,
+        "categories": ["food", "general"]
+      },
+
+    
+      "describe": {
+        "audio": "/assets/audio/describe.mp3",
+        "definition": "Give an account in words of (someone or something), including all the relevant characteristics, qualities, or events",
+        "type": "verb",
+        "points": 45,
+        "categories": ["general"]
+      },
+
+    
+      "educate": {
+        "audio": "/assets/audio/educate.mp3",
+        "definition": "Give intellectual, moral, and social instruction to (someone, especially a child), typically at a school or university",
+        "type": "verb",
+        "points": 45,
+        "categories": ["general"]
+      },
+
+    
+      "emphasis": {
+        "audio": "/assets/audio/emphasis.mp3",
+        "definition": "Special importance, value, or prominence given to something",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "gossip": {
+        "audio": "/assets/audio/gossip.mp3",
+        "definition": "Casual or unconstrained conversation or reports about other people, typically involving details that are not confirmed as being true",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "install": {
+        "audio": "/assets/audio/install.mp3",
+        "definition": "Place or fix (equipment or machinery) in position ready for use",
+        "type": "verb",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "lawyer": {
+        "audio": "/assets/audio/lawyer.mp3",
+        "definition": "A person who practices or studies law; an attorney or a counselor",
+        "type": "noun",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "margin": {
+        "audio": "/assets/audio/margin.mp3",
+        "definition": "The edge or border of something",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "meantime": {
+        "audio": "/assets/audio/meantime.mp3",
+        "definition": "Meanwhile",
+        "type": "adverb",
+        "points": 50,
+        "categories": ["general"]
+      },
+
+    
+      "partner": {
+        "audio": "/assets/audio/partner.mp3",
+        "definition": "Either of a pair of people engaged together in the same activity",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
+
+    
+      "pillow": {
+        "audio": "/assets/audio/pillow.mp3",
+        "definition": "A rectangular cloth bag stuffed with feathers, foam rubber, or other soft materials, used to support the head when lying down",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
 
 	
-    "banish": {
-      "audio": "/assets/audio/banish.mp3",
-      "definition": "Send (someone) away from a country or place as an official punishment",
-      "type": "verb",
-      "points": 40,
-      "categories": ["general"]
-    },
+      "student": {
+        "audio": "/assets/audio/student.mp3",
+        "definition": "A person who is studying at a school or college",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      },
 
-	
-    "baseball": {
-      "audio": "/assets/audio/baseball.mp3",
-      "definition": "A ball game played between two teams of nine on a field with a diamond-shaped circuit of four bases. It is played chiefly in the US, Canada, Latin America, and East Asia",
-      "type": "noun",
-      "points": 45,
-      "categories": ["general"]
-    },
-
-	
-    "basement": {
-      "audio": "/assets/audio/basement.mp3",
-      "definition": "The floor of a building which is partly or entirely below ground level",
-      "type": "noun",
-      "points": 45,
-      "categories": ["general"]
-    },
-
-	
-    "basket": {
-      "audio": "/assets/audio/basket.mp3",
-      "definition": "A container used to hold or carry things, typically made from interwoven strips of cane or wire",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "biology": {
-      "audio": "/assets/audio/biology.mp3",
-      "definition": "The study of living organisms, divided into many specialized fields that cover their morphology, physiology, anatomy, behavior, origin, and distribution",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "boundary": {
-      "audio": "/assets/audio/boundary.mp3",
-      "definition": "A line that marks the limits of an area; a dividing line",
-      "type": "noun",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "burden": {
-      "audio": "/assets/audio/trash.mp3",
-      "definition": "Load heavily",
-      "type": "verb",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "cardboard": {
-      "audio": "/assets/audio/cardboard.mp3",
-      "definition": "Pasteboard or stiff paper",
-      "type": "noun",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "careless": {
-      "audio": "/assets/audio/careless.mp3",
-      "definition": "Not giving sufficient attention or thought to avoiding harm or errors",
-      "type": "adjective",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "chemistry": {
-      "audio": "/assets/audio/chemistry.mp3",
-      "definition": "The branch of science that deals with the identification of the substances of which matter is composed; the investigation of their properties and the ways in which they interact, combine, and change; and the use of these processes to form new substances",
-      "type": "noun",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "college": {
-      "audio": "/assets/audio/college.mp3",
-      "definition": "An educational institution or establishment, in particular one providing higher education or specialized professional or vocational training",
-      "type": "noun",
-      "points": 45,
-      "categories": ["general"]
-    },
-
-	
-    "crispy": {
-      "audio": "/assets/audio/crispy.mp3",
-      "definition": "(of food, typically cooked food) having a pleasingly firm, dry, and brittle surface or texture",
-      "type": "adjective",
-      "points": 40,
-      "categories": ["food", "general"]
-    },
-
-	
-    "describe": {
-      "audio": "/assets/audio/describe.mp3",
-      "definition": "Give an account in words of (someone or something), including all the relevant characteristics, qualities, or events",
-      "type": "verb",
-      "points": 45,
-      "categories": ["general"]
-    },
-
-	
-    "educate": {
-      "audio": "/assets/audio/educate.mp3",
-      "definition": "Give intellectual, moral, and social instruction to (someone, especially a child), typically at a school or university",
-      "type": "verb",
-      "points": 45,
-      "categories": ["general"]
-    },
-
-	
-    "emphasis": {
-      "audio": "/assets/audio/emphasis.mp3",
-      "definition": "Special importance, value, or prominence given to something",
-      "type": "noun",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "gossip": {
-      "audio": "/assets/audio/gossip.mp3",
-      "definition": "Casual or unconstrained conversation or reports about other people, typically involving details that are not confirmed as being true",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "install": {
-      "audio": "/assets/audio/install.mp3",
-      "definition": "Place or fix (equipment or machinery) in position ready for use",
-      "type": "verb",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "lawyer": {
-      "audio": "/assets/audio/lawyer.mp3",
-      "definition": "A person who practices or studies law; an attorney or a counselor",
-      "type": "noun",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "margin": {
-      "audio": "/assets/audio/margin.mp3",
-      "definition": "The edge or border of something",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "meantime": {
-      "audio": "/assets/audio/meantime.mp3",
-      "definition": "Meanwhile",
-      "type": "adverb",
-      "points": 50,
-      "categories": ["general"]
-    },
-
-	
-    "partner": {
-      "audio": "/assets/audio/partner.mp3",
-      "definition": "Either of a pair of people engaged together in the same activity",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "pillow": {
-      "audio": "/assets/audio/pillow.mp3",
-      "definition": "A rectangular cloth bag stuffed with feathers, foam rubber, or other soft materials, used to support the head when lying down",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "student": {
-      "audio": "/assets/audio/student.mp3",
-      "definition": "A person who is studying at a school or college",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    },
-
-	
-    "teacher": {
-      "audio": "/assets/audio/teacher.mp3",
-      "definition": "A person who teaches, especially in a school",
-      "type": "noun",
-      "points": 40,
-      "categories": ["general"]
-    }
+    
+      "teacher": {
+        "audio": "/assets/audio/teacher.mp3",
+        "definition": "A person who teaches, especially in a school",
+        "type": "noun",
+        "points": 40,
+        "categories": ["general"]
+      }
 
 
     },
-
-
 
 
     
 
     "difficult": {
 
-		
-    "appreciate": {
-      "audio": "/assets/audio/appreciate.mp3",
-      "definition": "Recognize the full worth of",
-      "type": "verb",
-      "points": 60,
-      "categories": ["general"]
-    },
+      "elephant": {
+        "audio": "/assets/audio/elephant.mp3",
+        "definition": "The largest living land animal, characterized by its long trunk (elongated upper lip and nose), columnar legs, and huge head with temporal glands and wide, flat ears",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "kangaroo": {
+        "audio": "/assets/audio/kangaroo.mp3",
+        "definition": "A large plant-eating marsupial with a long powerful tail and strongly developed hind limbs that enable it to travel by leaping, found only in Australia and New Guinea",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "squirrel": {
+        "audio": "/assets/audio/squirrel.mp3",
+        "definition": "An agile tree-dwelling rodent with a bushy tail, typically feeding on nuts and seeds",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "chipmunk": {
+        "audio": "/assets/audio/chipmunk.mp3",
+        "definition": "A burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "hedgehog": {
+        "audio": "/assets/audio/hedgehog.mp3",
+        "definition": "A small nocturnal Old World mammal with a spiny coat and short legs, able to roll itself into a ball for defense",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "seahorse": {
+        "audio": "/assets/audio/seahorse.mp3",
+        "definition": "A small sea fish that swims in a vertical position and has a head that looks like the head of a horse",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "flamingo": {
+        "audio": "/assets/audio/flamingo.mp3",
+        "definition": "A large pink bird with long thin legs and a long neck, that lives near water in warm countries",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "reindeer": {
+        "audio": "/assets/audio/reindeer.mp3",
+        "definition": "a large deer with long antlers (= hard parts on the head that are like branches), that lives in cold northern regions",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "mongoose": {
+        "audio": "/assets/audio/mongoose.mp3",
+        "definition": "A small carnivorous mammal with a long body and tail and a grizzled or banded coat, native to Africa and Asia.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "alligator": {
+        "audio": "/assets/audio/alligator.mp3",
+        "definition": "A large semiaquatic reptile similar to a crocodile but with a broader and shorter head, native to the Americas and China.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "crocodile": {
+        "audio": "/assets/audio/crocodile.mp3",
+        "definition": "A large predatory semiaquatic reptile with long jaws, long tail, short legs, and a horny textured skin, using submersion and stealth to approach prey unseen.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "albatross": {
+        "audio": "/assets/audio/albatross.mp3",
+        "definition": "A large white ocean bird that has very long wings.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "chinchilla": {
+        "audio": "/assets/audio/chinchilla.mp3",
+        "definition": "A small South American rodent with soft gray fur and a long bushy tail",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "salamander": {
+        "audio": "/assets/audio/salamander.mp3",
+        "definition": "A lizard-like amphibian with an elongated body and tail and short limbs, once thought able to endure fire.",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "labradoodle": {
+        "audio": "/assets/audio/labradoodle.mp3",
+        "definition": "A dog that is bred as a cross between a Labrador and a poodle",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general", "animals"]
+      },
+            
+      "butterfly": {
+        "audio": "/assets/audio/butterfly.mp3",
+        "definition": "A flying insect with a long thin body and four large, usually brightly colored, wings",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "bumblebee": {
+        "audio": "/assets/audio/bumblebee.mp3",
+        "definition": "A large bee covered with small hairs that makes a loud noise as it flies",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "grasshopper": {
+        "audio": "/assets/audio/grasshopper.mp3",
+        "definition": "An insect with long back legs, that can jump very high and that makes a sound with its legs",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "hummingbird": {
+        "audio": "/assets/audio/hummingbird.mp3",
+        "definition": "A small brightly coloured bird that lives in warm countries and that can stay in one place in the air by beating its wings very fast, making a continuous low sound",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+            
+      "woodpecker": {
+        "audio": "/assets/audio/woodpecker.mp3",
+        "definition": "A bird with a long beak that it uses to make holes in trees when it is looking for insects to eat",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
+      
+      "appreciate": {
+        "audio": "/assets/audio/appreciate.mp3",
+        "definition": "Recognize the full worth of",
+        "type": "verb",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "background": {
-      "audio": "/assets/audio/background.mp3",
-      "definition": "The area or scenery behind the main object of contemplation, especially when perceived as a framework for it",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "background": {
+        "audio": "/assets/audio/background.mp3",
+        "definition": "The area or scenery behind the main object of contemplation, especially when perceived as a framework for it",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "chickenpox": {
-      "audio": "/assets/audio/chickenpox.mp3",
-      "definition": "An infectious disease causing a mild fever and a rash of itchy inflamed blisters. It is caused by the herpes zoster virus and mainly affects children, who are afterward usually immune",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "chickenpox": {
+        "audio": "/assets/audio/chickenpox.mp3",
+        "definition": "An infectious disease causing a mild fever and a rash of itchy inflamed blisters. It is caused by the herpes zoster virus and mainly affects children, who are afterward usually immune",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "chimpanzee": {
-      "audio": "/assets/audio/chimpanzee.mp3",
-      "definition": "A great ape with large ears, mainly black coloration, and lighter skin on the face, native to the forests of western and central Africa. Chimpanzees show advanced behavior such as the making and using of tools",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general", "animals"]
-    },
+      
+      "chimpanzee": {
+        "audio": "/assets/audio/chimpanzee.mp3",
+        "definition": "A great ape with large ears, mainly black coloration, and lighter skin on the face, native to the forests of western and central Africa. Chimpanzees show advanced behavior such as the making and using of tools",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general", "animals"]
+      },
 
-		
-    "circumstances": {
-      "audio": "/assets/audio/circumstances.mp3",
-      "definition": "Facts or conditions connected with or relevant to an event or action",
-      "type": "noun",
-      "points": 70,
-      "categories": ["general"]
-    },
+      
+      "circumstances": {
+        "audio": "/assets/audio/circumstances.mp3",
+        "definition": "Facts or conditions connected with or relevant to an event or action",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general"]
+      },
 
-		
-    "condescending": {
-      "audio": "/assets/audio/condescending.mp3",
-      "definition": "Having or showing a feeling of patronizing superiority",
-      "type": "adjective",
-      "points": 75,
-      "categories": ["general"]
-    },
+      
+      "condescending": {
+        "audio": "/assets/audio/condescending.mp3",
+        "definition": "Having or showing a feeling of patronizing superiority",
+        "type": "adjective",
+        "points": 75,
+        "categories": ["general"]
+      },
 
-		
-    "constitution": {
-      "audio": "/assets/audio/constitution.mp3",
-      "definition": "A body of fundamental principles or established precedents according to which a state or other organization is acknowledged to be governed",
-      "type": "noun",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "constitution": {
+        "audio": "/assets/audio/constitution.mp3",
+        "definition": "A body of fundamental principles or established precedents according to which a state or other organization is acknowledged to be governed",
+        "type": "noun",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "definitely": {
-      "audio": "/assets/audio/definitely.mp3",
-      "definition": "Without doubt (used for emphasis)",
-      "type": "adverb",
-      "points": 75,
-      "categories": ["general"]
-    },
+      
+      "definitely": {
+        "audio": "/assets/audio/definitely.mp3",
+        "definition": "Without doubt (used for emphasis)",
+        "type": "adverb",
+        "points": 75,
+        "categories": ["general"]
+      },
 
-		
-    "demonstration": {
-      "audio": "/assets/audio/demonstration.mp3",
-      "definition": "The action or process of showing the existence or truth of something by giving proof or evidence",
-      "type": "noun",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "demonstration": {
+        "audio": "/assets/audio/demonstration.mp3",
+        "definition": "The action or process of showing the existence or truth of something by giving proof or evidence",
+        "type": "noun",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "deoxidizer": {
-      "audio": "/assets/audio/deoxidizer.mp3",
-      "definition": "Any agent that reduces the oxygen content of a material",
-      "type": "noun",
-      "points": 70,
-      "categories": ["general"]
-    },
+      
+      "deoxidizer": {
+        "audio": "/assets/audio/deoxidizer.mp3",
+        "definition": "Any agent that reduces the oxygen content of a material",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general"]
+      },
 
-		
-    "diminishing": {
-      "audio": "/assets/audio/diminishing.mp3",
-      "definition": "Make or become less",
-      "type": "verb",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "diminishing": {
+        "audio": "/assets/audio/diminishing.mp3",
+        "definition": "Make or become less",
+        "type": "verb",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "distinguish": {
-      "audio": "/assets/audio/distinguish.mp3",
-      "definition": "Recognize or treat (someone or something) as different",
-      "type": "verb",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "distinguish": {
+        "audio": "/assets/audio/distinguish.mp3",
+        "definition": "Recognize or treat (someone or something) as different",
+        "type": "verb",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "environment": {
-      "audio": "/assets/audio/environment.mp3",
-      "definition": "The surroundings or conditions in which a person, animal, or plant lives or operates",
-      "type": "noun",
-      "points": 70,
-      "categories": ["general"]
-    },
+      
+      "environment": {
+        "audio": "/assets/audio/environment.mp3",
+        "definition": "The surroundings or conditions in which a person, animal, or plant lives or operates",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general"]
+      },
 
-		
-    "equivalent": {
-      "audio": "/assets/audio/equivalent.mp3",
-      "definition": "Equal in value, amount, function, meaning, etc",
-      "type": "adjective",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "equivalent": {
+        "audio": "/assets/audio/equivalent.mp3",
+        "definition": "Equal in value, amount, function, meaning, etc",
+        "type": "adjective",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "fabrication": {
-      "audio": "/assets/audio/fabrication.mp3",
-      "definition": "The action or process of manufacturing or inventing something",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "fabrication": {
+        "audio": "/assets/audio/fabrication.mp3",
+        "definition": "The action or process of manufacturing or inventing something",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "fabulously": {
-      "audio": "/assets/audio/fabulously.mp3",
-      "definition": "Extremely well; wonderfully",
-      "type": "adverb",
-      "points": 70,
-      "categories": ["general"]
-    },
+      
+      "fabulously": {
+        "audio": "/assets/audio/fabulously.mp3",
+        "definition": "Extremely well; wonderfully",
+        "type": "adverb",
+        "points": 70,
+        "categories": ["general"]
+      },
 
-		
-    "friendship": {
-      "audio": "/assets/audio/friendship.mp3",
-      "definition": "The emotions or conduct of close people; the state of being close people",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "friendship": {
+        "audio": "/assets/audio/friendship.mp3",
+        "definition": "The emotions or conduct of close people; the state of being close people",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "generosity": {
-      "audio": "/assets/audio/generosity.mp3",
-      "definition": "The quality or fact of being plentiful or large",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "generosity": {
+        "audio": "/assets/audio/generosity.mp3",
+        "definition": "The quality or fact of being plentiful or large",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "hypothesis": {
-      "audio": "/assets/audio/hypothesis.mp3",
-      "definition": "A supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation",
-      "type": "noun",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "hypothesis": {
+        "audio": "/assets/audio/hypothesis.mp3",
+        "definition": "A supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation",
+        "type": "noun",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "identifiers": {
-      "audio": "/assets/audio/identifiers.mp3",
-      "definition": "Sequences of characters used to identify or refer to a program or an element, such as a variable or a set of data, within it",
-      "type": "noun",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "identifiers": {
+        "audio": "/assets/audio/identifiers.mp3",
+        "definition": "Sequences of characters used to identify or refer to a program or an element, such as a variable or a set of data, within it",
+        "type": "noun",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "international": {
-      "audio": "/assets/audio/international.mp3",
-      "definition": "Existing, occurring, or carried on between two or more nations",
-      "type": "adjective",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "international": {
+        "audio": "/assets/audio/international.mp3",
+        "definition": "Existing, occurring, or carried on between two or more nations",
+        "type": "adjective",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "juxtaposition": {
-      "audio": "/assets/audio/juxtaposition.mp3",
-      "definition": "The fact of two things being seen or placed close together with contrasting effect",
-      "type": "noun",
-      "points": 70,
-      "categories": ["general"]
-    },
+      
+      "juxtaposition": {
+        "audio": "/assets/audio/juxtaposition.mp3",
+        "definition": "The fact of two things being seen or placed close together with contrasting effect",
+        "type": "noun",
+        "points": 70,
+        "categories": ["general"]
+      },
 
-		
-    "mesmerizing": {
-      "audio": "/assets/audio/mesmerizing.mp3",
-      "definition": "Capturing one's complete attention as if by magic",
-      "type": "adjective",
-      "points": 60,
-      "categories": ["general"]
-    },
+      
+      "mesmerizing": {
+        "audio": "/assets/audio/mesmerizing.mp3",
+        "definition": "Capturing one's complete attention as if by magic",
+        "type": "adjective",
+        "points": 60,
+        "categories": ["general"]
+      },
 
-		
-    "retrospective": {
-      "audio": "/assets/audio/retrospective.mp3",
-      "definition": "Looking back on or dealing with past events or situations",
-      "type": "adjective",
-      "points": 65,
-      "categories": ["general"]
-    },
+      
+      "retrospective": {
+        "audio": "/assets/audio/retrospective.mp3",
+        "definition": "Looking back on or dealing with past events or situations",
+        "type": "adjective",
+        "points": 65,
+        "categories": ["general"]
+      },
 
-		
-    "vocabulary": {
-      "audio": "/assets/audio/vocabulary.mp3",
-      "definition": "Words used on a particular occasion or in a particular sphere",
-      "type": "noun",
-      "points": 60,
-      "categories": ["general"]
-    }
-
-
-
+      
+      "vocabulary": {
+        "audio": "/assets/audio/vocabulary.mp3",
+        "definition": "Words used on a particular occasion or in a particular sphere",
+        "type": "noun",
+        "points": 60,
+        "categories": ["general"]
+      }
 	
 
   }
