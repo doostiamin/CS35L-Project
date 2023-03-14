@@ -84,7 +84,7 @@ app.get('/api/users/:name/points', (req, res) => {
   if(users.hasOwnProperty(name)) {
     res.json({
       success: true,
-      data: users[name].points
+      data: users[name]
     });
   } else {
     res.json({
