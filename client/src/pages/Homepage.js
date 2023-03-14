@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, TextField} from '@mui/material';
 import Button from '@mui/material/Button';
 import { display } from '@mui/system';
 import { Link } from "react-router-dom";
@@ -61,13 +61,13 @@ const Homepage = () => {
 
     const handleSearch = async () => {
         try {
-            const response = await axios.get(`/api/users/:name/points${searchTerm}`);
+            const response = await axios.get(`http://localhost:8080/api/users/${searchTerm}/points`);
             const result = response.data;
 
             if (result.success) {
-                setSearchResult(`Points for user ${searchTerm}: ${result.data}`);
+                setSearchResult(`${result.data.name} has ${result.data.points} points!`);
             } else {
-                setSearchResult(`User '${searchTerm}' not found`);
+                setSearchResult(`user '${searchTerm}' doesn't exist..`);
             }
         } catch (error) {
             setSearchResult(`Error: ${error.message}`);
@@ -80,8 +80,34 @@ const Homepage = () => {
         <div id="homepage">
             <Box display="flex" flexDirection="row" overflow="auto">
                 <Box sx={boxSidePanel} justifyContent="center">
-                    <h2>{n}</h2>
-                    <h3>Points: {points}</h3>
+                    <Box textAlign="center">
+                        <h2>{n}</h2>
+                        <h2>Points: {points}</h2>
+                    </Box>
+                    <Box textAlign="center">
+                        <h2>Search for a friend!</h2>
+                        <Box display="flex">
+                            <Box display="flex">
+                                <Box display="flex">
+                                    <TextField id="input" 
+                                                type="input" 
+                                                placeholder="Username" 
+                                                onChange={(e) => (setSearchTerm(e.target.value))}
+                                    />
+                                </Box>
+                                <Button variant="outlined" 
+                                onClick={() => handleSearch()}
+                                sx={{
+                                    ml: "5px"
+                                }}
+                                >find</Button>
+                            </Box>
+                        </Box>
+                        <Box sx={{fontSize:"20px"}}>
+                            <br/>
+                            {searchResult}
+                        </Box>
+                    </Box>
                     <div>
                         <Link to="/leaderboard" style={link}>
                             <Button variant="outlined" sx={{height:200, width:200, color: "black", borderColor: "black"}}>Leaderboard</Button>
