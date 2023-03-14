@@ -1,4 +1,4 @@
-import { Box, FormControl, TextField } from '@mui/material';
+import { Box, FormControl, TextField, Snackbar, Alert } from '@mui/material';
 import Button from '@mui/material/Button';
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from 'react';
@@ -12,7 +12,7 @@ const login = {
 };
 
 
-const Interact = () => {
+const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) => {
     
     const navigate = useNavigate();
 
@@ -50,9 +50,11 @@ const Interact = () => {
             }
             else{
                 if(username == "")
-                    alert("Please enter a username.");
+                    setErrorMessage("Please enter a username.");
                 else
-                    alert("Invalid username. Please sign up first!");
+                    setErrorMessage("Invalid username. Please sign up first!");
+                
+                setError(true);
             }
         }).catch(err=>{
             console.log(err);
@@ -62,11 +64,12 @@ const Interact = () => {
     function addUser(){
 
         if(username == "" || name == ""){
-            alert("Please fill out all fields.");
+            setErrorMessage("Please fill out all fields.");
+            setError(true);
             return;
         }
 
-        console.log("adding user ", username);
+        // console.log("adding user ", username);
         
         var existing = false;
 
@@ -81,7 +84,8 @@ const Interact = () => {
                     existing = true;
 
             if(existing){
-                alert("Username taken. Try a different one!");
+                setErrorMessage("Username taken. Try a different one!");
+                setError(true);
                 return;
             }
             else{
@@ -89,7 +93,8 @@ const Interact = () => {
                 axios.post('http://localhost:8080/api/users', {user: username, info: {"name": name, "points": 0}})
                 .then(function (response) {
                 if(response.data.success){
-                    alert("Welcome, Bee Slayer " + name + "!");
+                    setSuccessMessage("Welcome to the Bee Slayer family, " + name + "!");
+                    setSuccess(true);
                     setIsSignup(false);
                 }
                 }).catch(err=>{
@@ -104,13 +109,16 @@ const Interact = () => {
     // display signup fields
     if(isSignup){
         return (
-            <Box>
-                <Box display="flex" sx={{login}}>
+            <Box sx={{width: '16vw'}}>
+                <Box display="flex">
                     <TextField id="username" 
                     type="username" 
                     placeholder="username" 
                     onChange={(e) => setUsername(e.target.value)}
-                    sx={login}
+                    // sx={login}
+                    margin='dense'
+                    fullWidth
+                    size='small'
                     />
                 </Box>
                 <Box display="flex">
@@ -118,22 +126,25 @@ const Interact = () => {
                     type="text" 
                     placeholder="name" 
                     onChange={(e) => setName(e.target.value)}
-                    sx={login} 
+                    // sx={login} 
+                    margin='dense'
+                    fullWidth
+                    size='small'
                     />
                 </Box>
-                <Button variant="outlined" 
+                <Button variant="contained" 
                     onClick={() => addUser()}
                     sx={{
-                        margin: "5px",
-                        mt: "15px",
+                        // margin: "5px",
+                        mt: "1rem",
                         width: "100%"
                     }}
                 >join</Button>
-                <Button variant="outlined" 
+                <Button variant="text"
                     onClick={() => setIsSignup(false)}
                     sx={{
-                        margin: "5px",
-                        mt: "15px",
+                        // margin: "5px",
+                        mt: "0.5rem",
                         width: "100%"
                     }}
                 >Back to login</Button>
@@ -152,20 +163,22 @@ const Interact = () => {
                         type="userxname" 
                         placeholder="username" 
                         onChange={(e) => setUsername(e.target.value)}
-                        sx={login}
+                        // sx={login}
+                        size="small"
                     />
                     </Box>
-                    <Button variant="outlined" 
+                    <Button variant="contained" 
+                    size="small"
                     onClick={() => authenticate(setUname, setN, setPoints)}
                     sx={{
-                        margin: "5px", 
+                        marginLeft: 1,
                         width: "100px"
                     }}
                     >login</Button>
                 
                 </Box>
                 <Box align="center" width="100%" sx = {{mt: "5vh", mb:"10px"}}>Don't have an account yet? </Box>
-                <Button variant="outlined" 
+                <Button variant="text" 
                     onClick={() => setIsSignup(true)}
                     sx={{
                         margin: "5px",
@@ -180,15 +193,33 @@ const Interact = () => {
 }
 
 const Login = () => {
+    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("Error!");
+    const [success, setSuccess] = useState(false);
+    const [successMessage, setSuccessMessage] = useState("Success!");
 
-  return (
-    <Box height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-        <Box display="block" width="70vw" sx = {{mb: "2%"}}>
-            <img src={welcome} className="Welcome-image" alt = "welcome" width="100%"/>
+    return (
+        <Box height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" sx={{background: 'url("beehive2.jpg")', backgroundSize: 'cover'}}>
+            <Snackbar open={error} autoHideDuration={1000} onClose={() => {setError(false)}}>
+                <Alert onClose={() => {setError(false)}} variant="filled" severity="error" sx={{ width: '100%' }}>
+                    {errorMessage}
+                </Alert>
+            </Snackbar>
+
+            <Snackbar open={success} autoHideDuration={1000} onClose={() => {setSuccess(false)}}>
+                <Alert onClose={() => {setSuccess(false)}} variant="filled" severity="success" sx={{ width: '100%' }}>
+                    {successMessage}
+                </Alert>
+            </Snackbar>
+
+            <Box display={'flex'} flexDirection={'column'} alignItems={'center'} sx={{background: 'rgba(255,255,255,0.4)', borderRadius: 10}} py={2} px={1}>
+                <Box display="block" width="30vw" sx = {{mb: 2}}>
+                    <img src={welcome} className="Welcome-image" alt = "welcome" width="100%"/>
+                </Box>
+                <Interact isSignup="false" setError={setError} setErrorMessage={setErrorMessage} setSuccess={setSuccess} setSuccessMessage={setSuccessMessage} />
+            </Box>
         </Box>
-        <Interact isSignup="false" />
-    </Box>
-  );
+    );
 };
 
 export default Login;

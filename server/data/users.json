@@ -42,5 +42,9 @@
   "spelling": {
     "name": "Bee",
     "points": 0
+  },
+  "test": {
+    "name": "john doe",
+    "points": 0
   }
 }
