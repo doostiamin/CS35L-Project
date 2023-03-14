@@ -27,9 +27,9 @@
     },
 
     
-    "": {
-      "audio": "/assets/audio/.mp3",
-      "definition": "",
+    "mango": {
+      "audio": "/assets/audio/mango.mp3",
+      "definition": "A fleshy, oval, yellowish-red tropical fruit that is eaten ripe or used green for pickles or chutneys",
       "type": "noun",
       "points": 20,
       "categories": ["general", "food"]
