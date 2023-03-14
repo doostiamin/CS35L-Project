@@ -67,24 +67,6 @@ const link = {
 
 const Homepage = () => {
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [searchResult, setSearchResult] = useState("");
-
-    const handleSearch = async () => {
-        try {
-            const response = await axios.get(`http://localhost:8080/api/users/${searchTerm}/points`);
-            const result = response.data;
-
-            if (result.success) {
-                setSearchResult(`${result.data.name} has ${result.data.points} points!`);
-            } else {
-                setSearchResult(`user '${searchTerm}' doesn't exist..`);
-            }
-        } catch (error) {
-            setSearchResult(`Error: ${error.message}`);
-        }
-    };
-
     return (
     <UserContext.Consumer>
     {({ uname, setUname, n, setN, points, setPoints }) => (    
@@ -106,30 +88,6 @@ const Homepage = () => {
                     <Chip label={points + ' pts'} color={'primary'} />
                     <Typography variant='h6'>{n}</Typography>
                     <Avatar sx={{ width: 96, height: 96, backgroundColor: '#fff'}} src={createAvatar(miniavs, {seed: n, flip: true}).toDataUriSync()}></Avatar>
-                    {/* <Box textAlign="center">
-                        <h2>Search for a friend!</h2>
-                        <Box display="flex">
-                            <Box display="flex">
-                                <Box display="flex">
-                                    <TextField id="input" 
-                                                type="input" 
-                                                placeholder="Username" 
-                                                onChange={(e) => (setSearchTerm(e.target.value))}
-                                    />
-                                </Box>
-                                <Button variant="outlined" 
-                                onClick={() => handleSearch()}
-                                sx={{
-                                    ml: "5px"
-                                }}
-                                >find</Button>
-                            </Box>
-                        </Box>
-                        <Box sx={{fontSize:"20px"}}>
-                            <br/>
-                            {searchResult}
-                        </Box>
-                    </Box> */}
                 </Box>
                 <Box sx={boxSpell}>
                     <Link to="/spell" state={{difficulty: "challenge"}} style={link}>
