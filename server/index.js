@@ -2,7 +2,8 @@ const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 
-const USERS_DATA_FILE_PATH = './data/users.json';
+const USERS_DATA_DIR_NAME = 'data';
+const USERS_DATA_FILE_PATH = './' + USERS_DATA_DIR_NAME + '/users.json';
 const PORT = 8080;
 const WHITELIST = ['http://localhost:3000'];
 const CORS_OPTIONS = {
@@ -98,6 +99,11 @@ app.get('/api/users/:name/points', (req, res) => {
 //         Server Setup        //
 /////////////////////////////////
 app.listen(PORT, () => {
+  if(!fs.existsSync(USERS_DATA_FILE_PATH)) {
+    fs.mkdirSync(USERS_DATA_DIR_NAME);
+    fs.writeFileSync(USERS_DATA_FILE_PATH, JSON.stringify({}, null, 2));
+  }
+
   console.log(`listening on port ${PORT}`)
 });
 
