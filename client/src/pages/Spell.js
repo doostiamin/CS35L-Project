@@ -1,4 +1,4 @@
-import { Box, DialogContent, DialogTitle } from '@mui/material';
+import { Box, DialogContent, DialogTitle, IconButton, Alert, Snackbar, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Link, useLocation } from "react-router-dom";
@@ -9,19 +9,24 @@ import { UserContext } from "./UserContext";
 import axios from 'axios';
 import { borderColor } from '@mui/system';
 import spellImg from '../assets/spell.png';
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import InfoIcon from '@mui/icons-material/Info';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const boxDefault = {
     display: "flex",
     flexDirection: "column",
-    justifyContents: "center",
-    width: "50vw",
-    width: 0.5,
-    padding: 9,
-    m: 1,
+    justifyContent: "space-around",
+    width: "60vw",
+    // width: 0.5,
+    // padding: 9,
+    // m: 1,
     alignItems: "center",
     gap: 2,
-    border: 1,
-    borderColor: "lightGray"
+    // border: 1,
+    // borderColor: "lightGray"
 }
 
 export default function Spell(props) {
@@ -210,8 +215,11 @@ export default function Spell(props) {
     const [definition, setDefinition] = useState(difficulty[firstWord].definition);
     const [audio, setAudio] = useState(difficulty[firstWord].audio);
     const [pts, setPts] = useState(difficulty[firstWord].points);
-    console.log(pts);
+    // console.log(pts);
     const [wordCount, setWordCount] = useState(1);
+    const [streak, setStreak] = useState(0);
+
+    const [pointsAdded, setPointsAdded] = useState(0);
 
     //dialog states
  
@@ -227,6 +235,7 @@ export default function Spell(props) {
 
     const handleCloseChallengeFail = () => {
         setOpenChallengeFail(false);
+        setStreak(0);
     };
     
     const handleCloseDefinition = () => {
@@ -236,6 +245,7 @@ export default function Spell(props) {
     function addPoints (p) {
         // update in front
         value.setPoints(value.points + p);
+        setPointsAdded(p);
 
         // update in back
         axios.post('http://localhost:8080/api/users', {user: value.uname, info: {"name": value.n, "points": value.points + p}})
@@ -249,12 +259,13 @@ export default function Spell(props) {
     }
 
     function checkCorrect() {
-        console.log(answer);
-        console.log(word);
-        if (answer === word) {
+        // console.log(answer);
+        // console.log(word);
+        if (answer.toLowerCase().trim() === word.toLowerCase().trim()) {
             setOpenCorrect(true);
-            console.log(pts); 
-            addPoints(pts);    
+            // console.log(pts); 
+            addPoints(pts);   
+            setStreak(streak + 1); 
         }
         else {
             if (state === "challenge") {
@@ -303,70 +314,75 @@ export default function Spell(props) {
        new Audio(a).play()
    }
 
-    return ( 
-        <div id="spell">
-            <Box sx={{display: "flex", flexDirection: "column", width: 1, height: "100vh", alignItems: "center", justifyContent: "center"}}>
-                <Box sx={boxDefault}>
-                    <Box display="flex" width="50vw" sx = {{mb: "2%"}}>
-                        <img src={spellImg} className="spell-image" alt = "spell" width="100%"/>
+    return ( <>
+        <Dialog
+            open={openDefinition}
+            onClose={handleCloseDefinition}>
+            <DialogContent>
+                <Typography variant='h6'>{type}</Typography>
+                <Typography variant='body1'>{definition}</Typography>
+            </DialogContent>
+        </Dialog>
+
+        <Box sx={{background: 'url("beehive2.jpg")', backgroundSize: 'cover'}}>
+            <Box id="spell" sx={{backgroundColor: 'rgba(255,255,255,0.5)'}}>
+                <Box sx={{display: "flex", flexDirection: "column", width: 1, height: "100vh", alignItems: "center", justifyContent: "center"}}>
+                    <Box sx={boxDefault}>
+                        <Box display="flex" width="30vw">
+                            <img src={spellImg} className="spell-image" alt = "spell" width="100%"/>
+                        </Box>
+
+                        <Box display={'flex'} flexDirection={'column'}>
+                            <Box display={'flex'} justifyContent={'space-around'}>
+                                {!openCorrect ? <>
+                                    <Link to="/homepage">
+                                        <IconButton size='large' color='primary'>
+                                            <ArrowBackIcon fontSize='large' />
+                                        </IconButton>
+                                    </Link>
+                                    <IconButton size='large' color='primary' onClick={playAudio}>
+                                        <PlayCircleIcon fontSize={'large'} />
+                                    </IconButton>
+
+                                    <IconButton size='large' color='primary' onClick={() => setOpenDefinition(true)}>
+                                        <InfoIcon fontSize='large' />
+                                    </IconButton>
+
+                                    <IconButton size='large' color='primary' onClick={() => nextWord()}>
+                                        <SkipNextIcon fontSize='large' />
+                                    </IconButton>
+                                </> : <>
+                                    <IconButton size='large' color='primary' onClick={() => handleCloseCorrect()}>
+                                        <ArrowForwardIcon fontSize='large' />
+                                    </IconButton>
+                                </>}
+                            </Box>
+                            <Box display={'flex'} gap={1} mt={2}>
+                                <TextField id="standard-basic" size='small' label="Answer" variant="outlined" value={answer} onChange={(answer) => setAnswer(answer.target.value)}/>
+                                <Button variant="contained" onClick={() => checkCorrect()}>Check!</Button>
+                            </Box>
+
+                            <Snackbar open={openCorrect}>
+                                <Alert sx={{width: '20vw', mt: 2}} severity={'success'} variant={'filled'}>
+                                    {'You got it right! +' + pointsAdded + 'pts' }
+                                </Alert>
+                            </Snackbar>
+
+                            <Snackbar open={openIncorrect} autoHideDuration={5000} onClose={() => {handleCloseIncorrect()}}>
+                                <Alert onClose={handleCloseIncorrect} severity={'error'} variant={'filled'}>
+                                    Not quite, try again!
+                                </Alert>
+                            </Snackbar>
+
+                            <Snackbar open={openChallengeFail} autoHideDuration={5000} onClose={() => {handleCloseChallengeFail()}}>
+                                <Alert onClose={handleCloseChallengeFail} severity={'error'} variant={'filled'}>
+                                    {`Good try! Your total streak: ${streak}`}
+                                </Alert>
+                            </Snackbar>
+                        </Box>
                     </Box>
-                    <div>
-                        <Dialog
-                            open={openCorrect}
-                            onClose={handleCloseCorrect}>
-                            <DialogTitle>You Got It Right!</DialogTitle>
-                            <DialogContent>
-                            <Link to="/homepage">
-                                    <Button>Back to Homepage</Button>
-                                </Link>
-                                <Button onClick={handleCloseCorrect}>Next Word</Button>
-                            </DialogContent>
-                        </Dialog>
-                        <Dialog
-                            open={openIncorrect}
-                            onClose={handleCloseIncorrect}>
-                            <DialogTitle>Not Quite!</DialogTitle>
-                            <DialogContent>
-                            <Link to="/homepage">
-                                    <Button>Back to Homepage</Button>
-                                </Link>
-                                <Button onClick={(open) => setOpenIncorrect(false)}>Try Again</Button>
-                            </DialogContent>
-                        </Dialog>
-                        <Dialog
-                            open={openChallengeFail}
-                            onClose={handleCloseChallengeFail}>
-                            <DialogTitle>Good Try!</DialogTitle>
-                            <DialogContent>
-                            <p>Your Total Streak: {wordCount - 1}</p>
-                            <Link to="/homepage">
-                                    <Button>Back to Homepage</Button>
-                            </Link>
-                            </DialogContent>
-                        </Dialog>
-                        <TextField id="standard-basic" label="Answer" variant="standard" value={answer} onChange={(answer) => setAnswer(answer.target.value)}/>
-                        <Button variant="contained" sx={{height:40}} onClick={() => checkCorrect()}>Enter</Button>
-                    </div>
-                    <div>
-                        <Dialog
-                            open={openDefinition}
-                            onClose={handleCloseDefinition}>
-                            <DialogContent>
-                                <p>{type}</p>
-                                <p>{definition}</p>
-                            </DialogContent>
-                        </Dialog>
-                        <Button variant="outlined" sx={{height:40}} onClick={playAudio}>Listen</Button>
-                        <Button variant="outlined" sx={{height:40}} onClick={() => setOpenDefinition(true)}>Definition</Button>
-                        <Button variant="outlined" sx={{height:40}} onClick={() => nextWord()}>Skip</Button>
-                    </div>
-                    <div>
-                        <Link to="/homepage">
-                        <Button variant="outlined" sx={{height:40}}>Back</Button>
-                        </Link>
-                    </div>
                 </Box>
             </Box>
-        </div>
-    );
+        </Box>
+    </>);
 }
