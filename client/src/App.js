@@ -1,4 +1,4 @@
-import { React, useState, useContext } from "react";
+import { React, useState } from "react";
 import './App.css';
 import Homepage from './pages/Homepage';
 import Leaderboard from './pages/Leaderboard';

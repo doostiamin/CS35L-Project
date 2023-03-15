@@ -2,14 +2,13 @@ import { Box, Table, TableContainer, TableHead, TableRow, TableCell, TableBody, 
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import { useState, setState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import leaderboardImg from '../assets/leaderboard.png';
 import { createAvatar } from '@dicebear/core';
 import { miniavs } from '@dicebear/collection';
 
 // React component, row of the leaderboard
 function Row({name, points}){
-
   return(
     <TableRow sx={{borderTop: '2px solid #fff'}}>
       <TableCell align="center">{name}</TableCell>
@@ -78,7 +77,7 @@ export default function Leaderboard() {
               <img src={leaderboardImg} className="leaderboard-image" alt = "leaderboard" width="100%"/>
         </Box>
         <Box textAlign="center" mb={2}>
-            <h2>Search for a friend!</h2>
+            <Typography variant='h5' mb={1} my={2}>Search for a friend!</Typography>
             <Box display="flex" gap={2} flexDirection={'column'}>
                 <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
                   <Avatar sx={{ width: 96, height: 96, backgroundColor: Object.keys(searchResult).length > 0 && '#fff'}} src={Object.keys(searchResult).length > 0 && createAvatar(miniavs, {seed: searchResult.name, flip: true}).toDataUriSync()}></Avatar>

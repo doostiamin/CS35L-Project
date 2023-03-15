@@ -1,15 +1,10 @@
-import { Box, FormControl, TextField, Snackbar, Alert } from '@mui/material';
+import { Box, TextField, Snackbar, Alert } from '@mui/material';
 import Button from '@mui/material/Button';
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import welcome from '../assets/welcome.png';
 import axios from 'axios';
 import {UserContext} from './UserContext.js'
-
-
-const login = {
-  margin: "5px"
-};
 
 
 const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) => {
@@ -33,7 +28,6 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
             var users = Object.keys(response.data.data);
 
             for(let i=0; i<users.length; i++){
-                //console.log(username, " vs ", users[i]);
                 if (username == users[i]){  
                     valid = true;
                     
@@ -57,7 +51,7 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                 setError(true);
             }
         }).catch(err=>{
-            console.log(err);
+            console.error(err);
         })
     }
 
@@ -98,11 +92,11 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                     setIsSignup(false);
                 }
                 }).catch(err=>{
-                    console.log(err);
+                    console.error(err);
                 })
             }
         }).catch(err=>{
-            console.log(err);
+            console.error(err);
         })
     }
 
@@ -115,7 +109,6 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                     type="username" 
                     placeholder="username" 
                     onChange={(e) => setUsername(e.target.value)}
-                    // sx={login}
                     margin='dense'
                     fullWidth
                     size='small'
@@ -126,7 +119,6 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                     type="text" 
                     placeholder="name" 
                     onChange={(e) => setName(e.target.value)}
-                    // sx={login} 
                     margin='dense'
                     fullWidth
                     size='small'
@@ -135,7 +127,6 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                 <Button variant="contained" 
                     onClick={() => addUser()}
                     sx={{
-                        // margin: "5px",
                         mt: "1rem",
                         width: "100%"
                     }}
@@ -143,7 +134,6 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                 <Button variant="text"
                     onClick={() => setIsSignup(false)}
                     sx={{
-                        // margin: "5px",
                         mt: "0.5rem",
                         width: "100%"
                     }}
@@ -163,7 +153,6 @@ const Interact = ({setError, setErrorMessage, setSuccess, setSuccessMessage}) =>
                         type="userxname" 
                         placeholder="username" 
                         onChange={(e) => setUsername(e.target.value)}
-                        // sx={login}
                         size="small"
                     />
                     </Box>

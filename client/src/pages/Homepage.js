@@ -1,11 +1,8 @@
-import { Avatar, Box, Chip, Icon, IconButton, TextField, Typography} from '@mui/material';
+import { Avatar, Box, Chip, IconButton, Typography} from '@mui/material';
 import Button from '@mui/material/Button';
-import { display } from '@mui/system';
 import { Link } from "react-router-dom";
-import Stack from '@mui/material/Stack';
 import { UserContext } from "./UserContext.js";
-import { React, useState } from 'react';
-import axios from 'axios'; 
+import { React } from 'react';
 import spellImg from '../assets/spell.png';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -15,12 +12,8 @@ import { miniavs } from '@dicebear/collection';
 const boxSidePanel = {
     display: "flex",
     flexDirection: "row",
-    // width: 0.25, 
     py: 2,
     px: 4,
-    // height: "vmax",
-    // minWidth: 100,
-    // m: 1,
     alignItems: "center",
     backgroundColor: 'rgba(255,255,255,0.5)',
     gap: 2,
@@ -31,12 +24,9 @@ const boxSpell = {
     flexDirection: "row",
     backgroundColor: 'rgba(255,255,255,0.5)',
     height: '100%',
-    // width:0.75,
     padding: 4,
     gap: 2,
-    // m: 1,
     justifyContent: "space-around",
-    // overflow:"auto"
 }
 
 const buttonSX = {
@@ -51,14 +41,6 @@ const buttonSX = {
         border: "2px solid #000",
     }
 
-}
-
-const containedButtonSX = {
-    height: 175,
-    width: 175,
-    color: "black",
-    borderColor: "black",
-    backgroundColor: "lightYellow"
 }
 
 const link = {
@@ -91,22 +73,25 @@ const Homepage = () => {
                 </Box>
                 <Box sx={boxSpell}>
                     <Link to="/spell" state={{difficulty: "challenge"}} style={link}>
-                            <Button variant="outlined" sx={{height: '100%',
-                                                            width: '35vw',
-                                                            color: "black",
-                                                            backgroundColor: "rgba(255,255,255,0.1)", 
-                                                            border: '2px solid #000',
-                                                            fontSize:"40px",
-                                                            ':hover': {
-                                                                backgroundColor: 'rgba(255,255,255,0.5)',
-                                                                border: "2px solid #000",
-                                                            }
-                                                            }}>Challenge Mode</Button>
+                            <Button
+                                variant="outlined" 
+                                sx={{
+                                    height: '100%',
+                                    width: '35vw',
+                                    color: "black",
+                                    backgroundColor: "rgba(255,255,255,0.1)", 
+                                    border: '2px solid #000',
+                                    fontSize:"40px",
+                                    ':hover': {
+                                        backgroundColor: 'rgba(255,255,255,0.5)',
+                                        border: "2px solid #000",
+                                    }
+                                }}>Challenge Mode</Button>
                     </Link>
 
-                    <Box>
+                    <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
                         <Box>
-                            <h1>Spell By Difficulty</h1>
+                            <Typography variant='h4' mb={1}>Spell By Difficulty</Typography>
                             <Box sx={{display:'flex', width:1, justifyContent:'space-evenly', gap: 2}}>
                                 <Link to="/spell" state={{difficulty: "easy"}} style={link}>
                                     <Button variant="outlined" sx={buttonSX}>Easy</Button>
@@ -121,7 +106,7 @@ const Homepage = () => {
                         </Box>
 
                         <Box>
-                            <h1>Spell By Topic</h1>
+                            <Typography variant='h4' mb={1}>Spell By Topic</Typography>
                             <Box sx={{display:'flex', width:1, justifyContent:'space-evenly', gap: 2}}>
                                 <Link to="/spell" state={{difficulty: "general"}} style={link}>
                                         <Button variant="outlined" sx={buttonSX}>All Words</Button>

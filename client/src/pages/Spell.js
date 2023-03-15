@@ -1,4 +1,4 @@
-import { Box, DialogContent, DialogTitle, IconButton, Alert, Snackbar, Typography } from '@mui/material';
+import { Box, DialogContent, IconButton, Alert, Snackbar, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Link, useLocation } from "react-router-dom";
@@ -7,7 +7,6 @@ import Dialog from '@mui/material/Dialog';
 import data from '../data-objects.json';
 import { UserContext } from "./UserContext";
 import axios from 'axios';
-import { borderColor } from '@mui/system';
 import spellImg from '../assets/spell.png';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import InfoIcon from '@mui/icons-material/Info';
@@ -20,13 +19,8 @@ const boxDefault = {
     flexDirection: "column",
     justifyContent: "space-around",
     width: "60vw",
-    // width: 0.5,
-    // padding: 9,
-    // m: 1,
     alignItems: "center",
     gap: 2,
-    // border: 1,
-    // borderColor: "lightGray"
 }
 
 export default function Spell(props) {
@@ -49,6 +43,34 @@ export default function Spell(props) {
     let difficultLength = difficultWords.length;
     let categoryLength = categoryWords.length;
 
+    //difficulty states
+    let state = location.state.difficulty;
+    const [wordSet, setWordSet] = useState(loadWords(state));
+    const [wordSetLength, setWordSetLength] = useState(loadWordSetLengths(state));
+    const [difficulty, setDifficulty] = useState(loadDifficulty(state));
+    
+    //Dialog states
+    const [answer, setAnswer] = useState("");
+    const [openCorrect, setOpenCorrect] = useState(false);
+    const [openIncorrect, setOpenIncorrect] = useState(false);
+    const [openDefinition, setOpenDefinition] = useState(false);
+    //challenge dialog states
+    const [openChallengeFail, setOpenChallengeFail] = useState(false);
+
+    //word states
+    let firstWord = wordSet[0];
+    const [word, setWord] = useState(wordSet[0]);
+    const [type, setType] = useState(difficulty[firstWord].type);
+    const [definition, setDefinition] = useState(difficulty[firstWord].definition);
+    const [audio, setAudio] = useState(difficulty[firstWord].audio);
+    const [pts, setPts] = useState(difficulty[firstWord].points);
+    
+    const [wordCount, setWordCount] = useState(1);
+    const [streak, setStreak] = useState(0);
+
+    const [pointsAdded, setPointsAdded] = useState(0);
+
+    
     function getCategory(state) {
         //getting state words from easy
         for(let i = 0; i < easyLength; i++) {
@@ -194,33 +216,6 @@ export default function Spell(props) {
         }
     }
 
-    //difficulty states
-    let state = location.state.difficulty;
-    const [wordSet, setWordSet] = useState(loadWords(state));
-    const [wordSetLength, setWordSetLength] = useState(loadWordSetLengths(state));
-    const [difficulty, setDifficulty] = useState(loadDifficulty(state));
-    
-    //Dialog states
-    const [answer, setAnswer] = useState("");
-    const [openCorrect, setOpenCorrect] = useState(false);
-    const [openIncorrect, setOpenIncorrect] = useState(false);
-    const [openDefinition, setOpenDefinition] = useState(false);
-    //challenge dialog states
-    const [openChallengeFail, setOpenChallengeFail] = useState(false);
-
-    //word states
-    let firstWord = wordSet[0];
-    const [word, setWord] = useState(wordSet[0]);
-    const [type, setType] = useState(difficulty[firstWord].type);
-    const [definition, setDefinition] = useState(difficulty[firstWord].definition);
-    const [audio, setAudio] = useState(difficulty[firstWord].audio);
-    const [pts, setPts] = useState(difficulty[firstWord].points);
-    // console.log(pts);
-    const [wordCount, setWordCount] = useState(1);
-    const [streak, setStreak] = useState(0);
-
-    const [pointsAdded, setPointsAdded] = useState(0);
-
     //dialog states
  
     const handleCloseCorrect = () => {
@@ -254,16 +249,13 @@ export default function Spell(props) {
             console.log("gave user ", value.uname, " ", p, " points");
         }
         }).catch(err=>{
-            console.log(err);
+            console.error(err);
         })
     }
 
     function checkCorrect() {
-        // console.log(answer);
-        // console.log(word);
         if (answer.toLowerCase().trim() === word.toLowerCase().trim()) {
             setOpenCorrect(true);
-            // console.log(pts); 
             addPoints(pts);   
             setStreak(streak + 1); 
         }
@@ -297,7 +289,6 @@ export default function Spell(props) {
         setType(set[nextWord].type);
         setAudio(set[nextWord].audio);
         setPts(set[nextWord].points);
-        console.log(pts);
 
         // looping back through the words if reach the end of the list
         if (wordCount + 1 < wordSetLength) {
