@@ -15,6 +15,8 @@ The top scores of all players are displayed on the leaderboard. You can also sea
 
 # Setup
 
+> The automatic set up only works in MAC or Linux systems. If you are running windows, please refer to the [Client](#client-setup) and [Server](#server-setup) sections to set up the project manually.
+
 To automatically set up the project, you can use the following command after cloning the repository and changing the directory to the cloned directory:
 
 ```shell
