@@ -3,7 +3,7 @@ Spelling Bee is a fun and educational word spelling game designed to test your s
 
 # Getting Started
 
-Refer to the [Client](#client-setup) and [Server](#server-setup) sections to start getting the project to run on your local machine. After that simply load the site and create an account. Once you have created an account, you can log in and start playing.
+Refer to the [Setup](#setup) section to start getting the project to run on your local machine. After that simply load the site and create an account. Once you have created an account, you can log in and start playing.
 
 # How to Play
 
@@ -12,6 +12,18 @@ Once you have logged in, select the level of difficulty and genre of words you w
 # Leaderboard
 
 The top scores of all players are displayed on the leaderboard. You can also search for any other user's top score using the search bar.
+
+# Setup
+
+To automatically set up the project, you can use the following command after cloning the repository and changing the directory to the cloned directory:
+
+```shell
+./setup
+```
+
+> Please note that there are no checks and tests being done by the `./setup` command and it is merely used for convenience. Make sure you run the `./setup` command before you make any changes to the `server` and `client` directories to ensure proper set up.
+>
+> Alternatively, you can refer to the [Client](#client-setup) and [Server](#server-setup) sections to set up the project manually.
 
 # Client Setup
 

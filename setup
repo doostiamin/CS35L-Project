@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# set up server
+cd server
+npm i
+
+# set up client
+cd ../client
+npm i
+
+clear
+
+echo "Set up done! Use the following to start running client and server"
+echo "\tServer:"
+echo "\t\tcd server"
+echo "\t\tnpm run dev\t# for development"
+echo "\t\tnpm run prod\t# for production"
+echo "\tClient:"
+echo "\t\tcd client"
+echo "\t\tnpm start\n"
